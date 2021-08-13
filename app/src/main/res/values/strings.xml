@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MealToHome</string>
+    <string name="leave_a_feedback">Leave a feedback</string>
+    <string name="take_a_minute_to_write_a_review">take a minute to write a review</string>
+    <string name="meal_to_home">Meal To Home</string>
+    <string name="tell_us_what_you_feel">tell us what you feel</string>
+    <string name="submit">Submit</string>
+
+
 </resources>
