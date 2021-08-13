@@ -7,6 +7,62 @@
     tools:context=".contactus.ContactUs">
 
     <View
+        android:id="@+id/divider5"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="52dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:srcCompat="@drawable/ic_add_shopping_cart" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_person" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:srcCompat="@drawable/ic_favorite" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_home" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -23,6 +79,7 @@
         android:id="@+id/imageView3"
         android:layout_width="153dp"
         android:layout_height="124dp"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/images"
         android:scaleType="centerCrop"
@@ -31,11 +88,10 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="183dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/meal_to_home"
         android:textColor="#08BC0F"
         android:textSize="28dp"
@@ -104,7 +160,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="152dp"
         android:src="@android:drawable/stat_sys_speakerphone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -115,7 +171,7 @@
         android:layout_height="36dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="68dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="152dp"
         android:src="@android:drawable/sym_action_email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView11"
@@ -127,7 +183,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="160dp"
         android:text="@string/_94764545678"
         android:textColor="#090909"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -138,7 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="160dp"
         android:text="@string/mealyohome_gmail_com"
         android:textColor="#0B0B0B"
         app:layout_constraintBottom_toBottomOf="parent"
