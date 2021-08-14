@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MealToHome">
-        <activity android:name=".feedback.LeaveAFeedback"
+        <activity android:name=".menu.Menu3"></activity>
+        <activity android:name=".menu.Menu2" />
+        <activity android:name=".login.Login3" />
+        <activity android:name=".login.Login2" />
+        <activity android:name=".login.Login1" />
+        <activity android:name=".menu.Menu1" />
+        <activity android:name=".login.Login" />
+        <activity
+            android:name=".feedback.LeaveAFeedback"
             android:theme="@style/Theme.MealToHome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,9 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
