@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MealToHome</string>
+
     <string name="meal_to_home1">Meal To Home</string>
     <string name="meal_to_home2">Meal To Home</string>
     <string name="next1">Next</string>
@@ -49,5 +50,22 @@
     <string name="egg_salad_sandwich">Egg Salad Sandwich</string>
     <string name="view4">View</string>
     <string name="view5">View</string>
+
+    <string name="leave_a_feedback">Leave a feedback</string>
+    <string name="take_a_minute_to_write_a_review">take a minute to write a review</string>
+    <string name="tell_us_what_you_feel">tell us what you feel</string>
+    <string name="submit">Submit</string>
+    <string name="contct_us">CONTCT US</string>
+    <string name="e_mail">email:</string>
+    <string name="message">Message:</string>
+    <string name="send_message">SEND MESSAGE</string>
+    <string name="_94764545678">+94764545678</string>
+    <string name="mealyohome_gmail_com">mealyohome@gmail.com</string>
+    <string name="thank_you_we_will_be_touch_in_shortly">Thank You!.. We will be touch in shortly</string>
+    <string name="thankyou">Thank You! </string>
+    <string name="thank_you_message">We will be in touch<br></br> with you shortly</string>
+    <string name="back_to_home">Back To Home</string>
+    <string name="rate_the_delivery">Rate the Delivery</string>
+
 
 </resources>
