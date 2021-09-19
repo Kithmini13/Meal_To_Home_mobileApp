@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.scorpion.mealtohome" >
+
+
+
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.scorpion.mealtohome">
+
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        tools:replace="android:icon"
         android:supportsRtl="true"
+
         android:theme="@style/Theme.MealToHome" >
         <activity
             android:name=".payment.Payment1"
@@ -29,14 +36,71 @@
             android:exported="true" />
         <activity
             android:name=".feedback.LeaveAFeedback"
-            android:theme="@style/Theme.MealToHome" >
+            android:theme="@style/Theme.MealToHome" />
+
+
+
+         <activity
+            android:name=".order.orderhistory"
+            android:exported="true" />
+        <activity
+            android:name=".order.takeaway"
+            android:exported="true" />
+        <activity
+            android:name=".order.Orderdetails"
+            android:exported="true" />
+
+
+        <activity android:name=".menu.Menu3" />
+
+        <activity android:name=".menu.Menu2" />
+        <activity android:name=".login.Login3" />
+        <activity android:name=".login.Login2" />
+        <activity android:name=".login.Login1" />
+        <activity android:name=".menu.Menu1" />
+        <activity android:name=".login.Login"     android:theme="@style/Theme.MealToHomeNoActionBar" >
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
         <activity android:name=".MainActivity" />
-    </application>
+
+
+
+
+
+
+
+
+
+
+        <activity android:name=".contactus.ThankYouScreen">
+
+
+        </activity>
+
+
+
+        <activity
+            android:name=".contactus.ContactUs" >
+
+
+
+        </activity>
+
+
+
+
+
+
+
+
+     </application>
+
 
 </manifest>
