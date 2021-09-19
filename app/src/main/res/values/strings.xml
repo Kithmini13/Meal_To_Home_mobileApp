@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MealToHome</string>
-    <string name="meal_to_home">Meal To Home</string>
+     <string name="meal_to_home">Meal To Home</string>
     <string name="order_details">ORDER DETAILS</string>
     <string name="food_name">Food Name</string>
     <string name="quantity">Quantity</string>
@@ -36,4 +36,76 @@
     <string name="pizza_rs_200_00">Pizza Rs.200.00</string>
     <string name="_08_08_21">08/08/21</string>
     <string name="burger_rs_200_00">Burger Rs.200.00</string>
-</resources>
+
+
+    <string name="meal_to_home1">Meal To Home</string>
+    <string name="meal_to_home2">Meal To Home</string>
+    <string name="next1">Next</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="meal_to_home3">Meal To Home</string>
+    <string name="code">Code</string>
+    <string name="enter_customer_code">Enter Confirmation Code</string>
+    <string name="re_send_code">Re send code</string>
+    <string name="next2">Next</string>
+    <string name="meal_to_home4">Meal To Home</string>
+    <string name="password">********</string>
+    <string name="customer_email_address">dashunf@gmail.com</string>
+    <string name="enter_your_name">Enter your name</string>
+<!--    <string name="name">Name</string>-->
+    <string name="password_test">Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="next">Next</string>
+    <string name="meal_to_home5">Meal To Home</string>
+    <string name="sri_lankan1">Sri Lankan</string>
+    <string name="indian1">Indian</string>
+    <string name="italian1">Italian</string>
+    <string name="chinese1">chinese</string>
+    <string name="my_style_chicken_fried_rice_rs_200_00">My style chicken fried rice Rs_200_00</string>
+    <string name="gallic_butter_carbs_rs_4200_00">Gallic butter carbs Rs_4200_00</string>
+    <string name="spaghetti_rs_440_00">Spaghetti Rs 440.00</string>
+    <string name="view1">View</string>
+    <string name="view2">View</string>
+    <string name="view3">View</string>
+    <string name="meal_to_home6">Meal To Home</string>
+    <string name="sri_lankan2">Sri Lankan</string>
+    <string name="indian2">Indian</string>
+    <string name="italian2">Italian</string>
+    <string name="chinese2">chinese</string>
+    <string name="my_style_chicken_fried_rice">My Style chicken fried rice</string>
+    <string name="basmathi_rice_chicken_devel_fry_onion_chilly_paste_vegetable_chopsy">Basmathi rice Chicken Devel Fry onion Chilly paste Vegetable chopsy</string>
+    <string name="recipe_for_getting">Recipe For Getting</string>
+    <string name="order">ORDER</string>
+    <string name="add_to_favorites">ADD TO FAVORITES</string>
+<!--    <string name="rs_200_00">Rs 200.00</string>-->
+<!--    <string name="meal_to_home">Meal To Home</string>-->
+    <string name="sri_lankan">Sri Lankan</string>
+    <string name="indian">Indian</string>
+    <string name="italian">Italian</string>
+    <string name="chinese">chinese</string>
+    <string name="favorites">FAVORITES</string>
+    <string name="grilled_bbq_chicken">Grilled BBQ chicken</string>
+    <string name="egg_salad_sandwich">Egg Salad Sandwich</string>
+    <string name="view4">View</string>
+    <string name="view5">View</string>
+
+    <string name="leave_a_feedback">Leave a feedback</string>
+    <string name="take_a_minute_to_write_a_review">take a minute to write a review</string>
+    <string name="tell_us_what_you_feel">tell us what you feel</string>
+<!--    <string name="submit">Submit</string>-->
+    <string name="contct_us">CONTCT US</string>
+    <string name="e_mail">email:</string>
+    <string name="message">Message:</string>
+    <string name="send_message">SEND MESSAGE</string>
+    <string name="_94764545678">+94764545678</string>
+    <string name="mealyohome_gmail_com">mealyohome@gmail.com</string>
+    <string name="thank_you_we_will_be_touch_in_shortly">Thank You!.. We will be touch in shortly</string>
+    <string name="thankyou">Thank You! </string>
+    <string name="thank_you_message">We will be in touch<br></br> with you shortly</string>
+    <string name="back_to_home">Back To Home</string>
+    <string name="rate_the_delivery">Rate the Delivery</string>
+    <string name="my_style_chicken_fride_rice_rs_200_00">My Style Chichek Fried Rice</string>
+    <string name="grallic_butter_carbs_rs_4200_00">Garlic Butter Crabs Rs.4200.00</string>
+    <string name="basmathi_rice_chiken_deval_fry_onion_chily_paste_vegetable_chopsy">Basmati Rice Chicken Deval Fry Onion Chily Paste Vegetable Chopsy</string>
+
+
+ </resources>
