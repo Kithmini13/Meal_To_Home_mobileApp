@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.scorpion.mealtohome.R;
-
-public class Orderdetails extends AppCompatActivity {
+//order
+public class Orderdetails  extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
