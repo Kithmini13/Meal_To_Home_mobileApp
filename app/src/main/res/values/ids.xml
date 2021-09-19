@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="imageView4" type="id">imageLogo</item>
-    <item name="divider2" type="id">divider2</item>
-    <item name="imageView5" type="id">imageView5</item>
-    <item name="editTextTextPersonName3" type="id">editTextTextPersonName3</item>
+<!--    <item name="imageView4" type="id">imageLogo</item>-->
+<!--    <item name="divider2" type="id">divider2</item>-->
+<!--    <item name="imageView5" type="id">imageView5</item>-->
+<!--    <item name="editTextTextPersonName3" type="id">editTextTextPersonName3</item>-->
 </resources>

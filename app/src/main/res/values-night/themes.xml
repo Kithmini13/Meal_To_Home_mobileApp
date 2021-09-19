@@ -15,4 +15,14 @@
 <!--    </style>-->
 <!--</resources>-->
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.MealToHome" parent="Theme.AppCompat.Light">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green_light</item>
+        <item name="colorPrimaryVariant">@color/green_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
+
+    </style>
+
 </resources>
