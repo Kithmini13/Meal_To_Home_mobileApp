@@ -1,3 +1,53 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MealToHome</string>
+
+    <string name="meal_to_home_01">Meal To Home</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="name_01">Name :</string>
+    <string name="address_01">Address :</string>
+    <string name="location_01">Location :</string>
+    <string name="contact_no">Contact no :</string>
+    <string name="cancle">Cancle</string>
+
+    <string name="meal_to_home_02">Meal To Home</string>
+    <string name="dilivery_details">Dilivery Details</string>
+    <string name="date_01">Date :</string>
+    <string name="name_02">Name :</string>
+    <string name="address">Address :</string>
+    <string name="location">Location :</string>
+    <string name="make_payment">MAKE PAYMENT</string>
+
+    <string name="meal_to_home_03">Meal To Home</string>
+    <string name="payment">Payment</string>
+    <string name="meal_to_home_04">Meal To Home</string>
+    <string name="chose_a_yayment_method">Chose a yayment method</string>
+    <string name="visa">Visa</string>
+    <string name="master">Master</string>
+    <string name="name_03">Name :</string>
+    <string name="amount_01">Amount :</string>
+
+    <string name="meal_to_home_05">Meal To Home</string>
+    <string name="enter_card_details">Enter Card Details</string>
+    <string name="name">Name :</string>
+    <string name="card_no">Card No :</string>
+    <string name="xxxx_xxxx_xxxx_xxxx">XXXX-XXXX-XXXX-XXXX</string>
+    <string name="securitv_code">Securitv Code :</string>
+    <string name="cvn">CVN</string>
+    <string name="expired_date">Expired Date :</string>
+    <string name="pay3">PAY</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+
+    <string name="payment_success_06">Payment Success</string>
+    <string name="thank_you_for_your_payment">Thank you for your payment.</string>
+    <string name="payment_information">Payment Information</string>
+    <string name="date_02">Date :</string>
+    <string name="status">Status :</string>
+    <string name="payment_method">Payment Method :</string>
+    <string name="amount">Amount :</string>
+    <string name="amiunt">Amiunt :</string>
+    <string name="date">Date :</string>
+    <string name="meal_to_home">Meal To Home</string>
+    <string name="cash">CASH</string>
+    <string name="card">CARD</string>
+    <string name="pay">PAY</string>
 </resources>
