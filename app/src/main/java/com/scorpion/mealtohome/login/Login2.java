@@ -1,18 +1,16 @@
-package com.scorpion.mealtohome.feedback;
+package com.scorpion.mealtohome.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.scorpion.mealtohome.R;
 
-
-public class LeaveAFeedback extends AppCompatActivity {
+public class Login2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leave_afeedback);
+        setContentView(R.layout.activity_login2);
     }
 }
