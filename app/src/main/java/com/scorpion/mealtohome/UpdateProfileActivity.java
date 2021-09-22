@@ -79,6 +79,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(UpdateProfileActivity.this, "No Profile", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }
