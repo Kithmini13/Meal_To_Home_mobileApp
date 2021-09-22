@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu.Menu1">
+    tools:context=".menu.Menu1India">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
             <Button
-                android:id="@+id/btnSriLanka"
+                android:id="@+id/btnSriLankaI"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginStart="5dp"
@@ -64,40 +64,40 @@
                 android:layout_marginEnd="8dp"
                 android:background="#A0D660"
                 android:text="@string/sri_lankan"
-                app:layout_constraintEnd_toStartOf="@+id/btnIndian"
+                app:layout_constraintEnd_toStartOf="@+id/btnIndianI"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
             <Button
-                android:id="@+id/btnIndian"
+                android:id="@+id/btnIndianI"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/indian"
-                app:layout_constraintBaseline_toBaselineOf="@+id/btnSriLanka"
-                app:layout_constraintEnd_toStartOf="@+id/btnItalian"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnSriLankaI"
+                app:layout_constraintEnd_toStartOf="@+id/btnItalianI"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView7" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewI1" />
 
             <Button
-                android:id="@+id/btnItalian"
+                android:id="@+id/btnItalianI"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/italian"
-                app:layout_constraintBaseline_toBaselineOf="@+id/btnIndian"
-                app:layout_constraintEnd_toStartOf="@+id/btnChinese" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnIndianI"
+                app:layout_constraintEnd_toStartOf="@+id/btnChineseI" />
 
             <Button
-                android:id="@+id/btnChinese"
+                android:id="@+id/btnChineseI"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="5dp"
                 android:text="@string/chinese"
-                app:layout_constraintBaseline_toBaselineOf="@+id/btnItalian"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnItalianI"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <View
@@ -117,7 +117,7 @@
                 android:layout_height="1dp"
                 android:layout_marginBottom="12dp"
                 android:background="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/imageView9"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewI3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.625"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -129,12 +129,12 @@
                 android:layout_marginTop="56dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="16dp"
-                android:text="@string/my_style_chicken_fride_rice_rs_200_00"
+                android:text="@string/india1"
                 android:textColor="#070303"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvSL1"
+                app:layout_constraintBottom_toTopOf="@+id/tvIN1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnChinese"
+                app:layout_constraintTop_toBottomOf="@+id/btnChineseI"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
@@ -144,13 +144,13 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/grallic_butter_carbs_rs_4200_00"
+                android:text="@string/india2"
                 android:textColor="#070303"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvSL2"
+                app:layout_constraintBottom_toTopOf="@+id/tvIN2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.45"
-                app:layout_constraintStart_toEndOf="@+id/imageView8" />
+                app:layout_constraintStart_toEndOf="@+id/imageViewI2" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -160,18 +160,18 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginBottom="52dp"
-                android:text="@string/spaghetti_rs_440_00"
+                android:text="@string/india3"
                 android:textColor="#070303"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/tvSL3"
+                app:layout_constraintBottom_toTopOf="@+id/tvIN3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/imageViewI3"
                 app:layout_constraintTop_toBottomOf="@+id/divider4"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/tvSL1"
+                android:id="@+id/tvIN1"
                 android:layout_width="64dp"
                 android:layout_height="27dp"
                 android:layout_marginEnd="76dp"
@@ -184,7 +184,7 @@
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
-                android:id="@+id/tvSL2"
+                android:id="@+id/tvIN2"
                 android:layout_width="56dp"
                 android:layout_height="21dp"
                 android:layout_marginEnd="84dp"
@@ -197,11 +197,11 @@
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
-                android:id="@+id/tvSL3"
+                android:id="@+id/tvIN3"
                 android:layout_width="60dp"
                 android:layout_height="29dp"
-                android:layout_marginEnd="76dp"
-                android:layout_marginBottom="104dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="132dp"
                 android:text="@string/view1"
                 android:textColor="#08BC0F"
                 android:textSize="16sp"
@@ -210,7 +210,7 @@
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/imageViewI1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="16dp"
@@ -220,10 +220,10 @@
                 app:layout_constraintEnd_toStartOf="@+id/textView9"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/fried_rice" />
+                app:srcCompat="@drawable/indian1" />
 
             <ImageView
-                android:id="@+id/imageView8"
+                android:id="@+id/imageViewI2"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="16dp"
@@ -232,20 +232,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider3"
                 app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/carbs" />
+                app:srcCompat="@drawable/indian2" />
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/imageViewI3"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="92dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/spaghetti1" />
+                app:srcCompat="@drawable/indian3" />
 
             <ImageView
-                android:id="@+id/imgVProfile"
+                android:id="@+id/imageView10"
                 android:layout_width="47dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="16dp"
@@ -253,7 +253,7 @@
                 android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvSL3"
+                app:layout_constraintTop_toBottomOf="@+id/tvIN3"
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/person" />
 
@@ -266,7 +266,7 @@
                 android:layout_marginBottom="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView12"
-                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewI3"
                 app:srcCompat="@drawable/cart" />
 
             <ImageView
@@ -276,7 +276,7 @@
                 android:layout_marginEnd="60dp"
                 android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imgVProfile"
+                app:layout_constraintEnd_toStartOf="@+id/imageView10"
                 app:srcCompat="@drawable/fav" />
 
             <ImageView
@@ -299,7 +299,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.531"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView9"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewI3"
                 app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

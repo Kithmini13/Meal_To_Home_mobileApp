@@ -14,132 +14,100 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.scorpion.mealtohome.R;
-import com.scorpion.mealtohome.UpdateProfileActivity;
-import com.scorpion.mealtohome.login.Login;
-import com.scorpion.mealtohome.login.Login3;
 
 import java.io.ByteArrayOutputStream;
 
-public class Menu1 extends AppCompatActivity {
+public class Menu1India extends AppCompatActivity {
 
     Button btnSriLanka, btnIndian, btnItalian, btnChinese;
-    TextView tvSL1, tvSL2, tvSL3,textView9,textView10,textView11;
-    ImageView imageView7,imageView8,imageView9,imgVProfile;
-    String S1,S2,S3;
+    TextView tvIN1, tvIN2, tvIN3;
+    ImageView imageViewI1,imageViewI2,imageViewI3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu1);
+        setContentView(R.layout.activity_menu1_india);
 
         ActionBar actionBar = getSupportActionBar();
 
         // showing the back button in action bar
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        btnSriLanka = findViewById(R.id.btnSriLanka);
-        btnIndian = findViewById(R.id.btnIndian);
-        btnItalian = findViewById(R.id.btnItalian);
-        btnChinese = findViewById(R.id.btnChinese);
-        imageView7 = findViewById(R.id.imageView7);
-        imageView8 = findViewById(R.id.imageView8);
-        imageView9 = findViewById(R.id.imageView9);
-        textView9 = findViewById(R.id.textView9);
-        textView10 = findViewById(R.id.textView10);
-        textView11 = findViewById(R.id.textView11);
-        imgVProfile = findViewById(R.id.imgVProfile);
+        btnSriLanka = findViewById(R.id.btnSriLankaI);
+        btnIndian = findViewById(R.id.btnIndianI);
+        btnItalian = findViewById(R.id.btnItalianI);
+        btnChinese = findViewById(R.id.btnChineseI);
+        imageViewI1 = findViewById(R.id.imageViewI1);
+        imageViewI2 = findViewById(R.id.imageViewI2);
+        imageViewI3 = findViewById(R.id.imageViewI3);
 
-        tvSL1 = findViewById(R.id.tvSL1);
-        tvSL2 = findViewById(R.id.tvSL2);
-        tvSL3 = findViewById(R.id.tvSL3);
+        tvIN1 = findViewById(R.id.tvIN1);
+        tvIN2 = findViewById(R.id.tvIN2);
+        tvIN3 = findViewById(R.id.tvIN3);
 
         btnSriLanka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Menu1.this, Menu1.class);
+                Intent intent=new Intent(Menu1India.this, Menu1.class);
                 startActivity(intent);
                 finish();
             }
         }); btnIndian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, Menu1India.class);
+                Intent intent=new Intent(Menu1India.this, Menu1India.class);
                 startActivity(intent);
                 finish();
             }
         }); btnItalian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, Menu1Italian.class);
+                Intent intent=new Intent(Menu1India.this, Menu1Italian.class);
                 startActivity(intent);
                 finish();
             }
         }); btnChinese.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, Menu1Chines.class);
+                Intent intent=new Intent(Menu1India.this, Menu1Chines.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        tvSL1.setOnClickListener(new View.OnClickListener() {
+        tvIN1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, Menu2.class);
-
-                S1 = textView9.getText().toString();
-                intent.putExtra("title",S1);
-                intent.putExtra("price","200.00");
-
-                imageView7.buildDrawingCache();
-                Bitmap bitmap = imageView7.getDrawingCache();
+                Intent intent=new Intent(Menu1India.this, Menu2.class);
+                imageViewI1.buildDrawingCache();
+                Bitmap bitmap = imageViewI1.getDrawingCache();
                 ByteArrayOutputStream bs = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 50, bs);
                 intent.putExtra("byteArray", bs.toByteArray());
                 startActivity(intent);
                 finish();
             }
-        });tvSL2.setOnClickListener(new View.OnClickListener() {
+        });tvIN2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, Menu2.class);
-
-                S2 = textView10.getText().toString();
-                intent.putExtra("title",S2);
-                intent.putExtra("price","4200.00");
-
-                imageView8.buildDrawingCache();
-                Bitmap bitmap = imageView8.getDrawingCache();
+                Intent intent=new Intent(Menu1India.this, Menu2.class);
+                imageViewI2.buildDrawingCache();
+                Bitmap bitmap = imageViewI2.getDrawingCache();
                 ByteArrayOutputStream bs = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 50, bs);
                 intent.putExtra("byteArray", bs.toByteArray());
                 startActivity(intent);
                 finish();
             }
-        });tvSL3.setOnClickListener(new View.OnClickListener() {
+        });tvIN3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, Menu2.class);
-
-                S3 = textView11.getText().toString();
-                intent.putExtra("title",S3);
-                intent.putExtra("price","440.00");
-
-                imageView9.buildDrawingCache();
-                Bitmap bitmap = imageView9.getDrawingCache();
+                Intent intent=new Intent(Menu1India.this, Menu2.class);
+                imageViewI3.buildDrawingCache();
+                Bitmap bitmap = imageViewI3.getDrawingCache();
                 ByteArrayOutputStream bs = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 50, bs);
                 intent.putExtra("byteArray", bs.toByteArray());
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        imgVProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Menu1.this, UpdateProfileActivity.class);
                 startActivity(intent);
                 finish();
             }
