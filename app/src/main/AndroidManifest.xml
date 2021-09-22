@@ -55,6 +55,33 @@
         <activity android:name=".contactus.ThankYouScreen" />
         <activity android:name=".contactus.ContactUs" />
         <activity android:name=".MainActivity" />
+        <activity
+            android:name=".payment.Payment1"
+            android:exported="true" />
+        <activity
+            android:name=".payment.Payment4"
+            android:exported="true" />
+        <activity
+            android:name=".payment.Payment3"
+            android:exported="true" />
+        <activity
+            android:name=".payment.Payment2"
+            android:exported="true" />
+        <activity
+            android:name=".delivery.Delivery2"
+            android:exported="true" />
+        <activity
+            android:name=".delivery.Delivery1"
+            android:exported="true" />
+        <activity
+            android:name=".order.orderhistory"
+            android:exported="true" />
+        <activity
+            android:name=".order.takeaway"
+            android:exported="true" />
+        <activity
+            android:name=".order.Orderdetails"
+            android:exported="true" />
     </application>
 
 </manifest>

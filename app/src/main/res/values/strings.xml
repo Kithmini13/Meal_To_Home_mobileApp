@@ -1,5 +1,95 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MealToHome</string>
+
+
+    <string name="meal_to_home_01">Meal To Home</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="name_01">Name :</string>
+    <string name="address_01">Address :</string>
+    <string name="location_01">Location :</string>
+    <string name="contact_no">Contact no :</string>
+    <string name="cancle">Cancle</string>
+
+    <string name="meal_to_home_02">Meal To Home</string>
+    <string name="dilivery_details">Dilivery Details</string>
+    <string name="date_01">Date :</string>
+    <string name="name_02">Name :</string>
+    <string name="address">Address :</string>
+    <string name="location">Location :</string>
+    <string name="make_payment">MAKE PAYMENT</string>
+
+    <string name="meal_to_home_03">Meal To Home</string>
+    <string name="payment">Payment</string>
+    <string name="meal_to_home_04">Meal To Home</string>
+    <string name="chose_a_yayment_method">Chose a yayment method</string>
+    <string name="visa">Visa</string>
+    <string name="master">Master</string>
+    <string name="name_03">Name :</string>
+    <string name="amount_01">Amount :</string>
+
+    <string name="meal_to_home_05">Meal To Home</string>
+    <string name="enter_card_details">Enter Card Details</string>
+    <string name="name">Name :</string>
+    <string name="card_no">Card No :</string>
+    <string name="xxxx_xxxx_xxxx_xxxx">XXXX-XXXX-XXXX-XXXX</string>
+    <string name="securitv_code">Securitv Code :</string>
+    <string name="cvn">CVN</string>
+    <string name="expired_date">Expired Date :</string>
+    <string name="pay3">PAY</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+
+    <string name="payment_success_06">Payment Success</string>
+    <string name="thank_you_for_your_payment">Thank you for your payment.</string>
+    <string name="payment_information">Payment Information</string>
+    <string name="date_02">Date :</string>
+    <string name="status">Status :</string>
+    <string name="payment_method">Payment Method :</string>
+    <string name="amount">Amount :</string>
+    <string name="amiunt">Amiunt :</string>
+    <string name="date">Date :</string>
+    <string name="meal_to_home">Meal To Home</string>
+    <string name="cash">CASH</string>
+    <string name="card">CARD</string>
+    <string name="pay">PAY</string>
+
+
+
+    <string name="order_details">ORDER DETAILS</string>
+    <string name="food_name">Food Name</string>
+    <string name="quantity">Quantity</string>
+    <string name="price">Price</string>
+    <string name="total">Total</string>
+    <string name="my_style_chicken_fride_rice">My style chicken fride rice</string>
+    <string name="_1_add">1 Add</string>
+    <string name="rs_200_00">Rs.200.00</string>
+    <string name="spaghetti">Spaghetti</string>
+    <string name="rs_440_00">Rs.440.00</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="rs_640_00">Rs.640.00</string>
+    <string name="done">DONE</string>
+    <string name="let_s_start_ordering">LET\'S START ORDERING</string>
+    <string name="deliver">DELIVER</string>
+    <string name="take_away">TAKE AWAY</string>
+    <string name="select_branch">Select branch</string>
+    <string name="submit">SUBMIT</string>
+    <string name="order_required_time">Order required time</string>
+    <string name="id_no">ID No</string>
+
+    <string name="customer_order_history">CUSTOMER ORDER HISTORY</string>
+    <string name="order_type">Order type</string>
+
+    <string name="order_description">Order description</string>
+    <string name="delivery">Delivery</string>
+    <string name="_05_08_21">05/08/21</string>
+    <string name="vegitable_rice_rs_200_00">Vegitable Rice Rs.200.00</string>
+    <string name="takeaway">Takeaway</string>
+    <string name="_06_08_21">06/08/21</string>
+    <string name="chicken_rice_rs_300_00">Chicken Rice Rs.300.00</string>
+    <string name="_07_08_21">07/08/21</string>
+    <string name="pizza_rs_200_00">Pizza Rs.200.00</string>
+    <string name="_08_08_21">08/08/21</string>
+    <string name="burger_rs_200_00">Burger Rs.200.00</string>
+
 
     <string name="meal_to_home1">Meal To Home</string>
     <string name="meal_to_home2">Meal To Home</string>
@@ -17,7 +107,7 @@
     <string name="signUp_msg">Not a Member? Sign up Now</string>
     <string name="signIn_msg">Already Registered? Sign In Now</string>
     <string name="enter_your_name">Enter your name</string>
-    <string name="name">Name</string>
+<!--    <string name="name">Name</string>-->
     <string name="password_test">Password</string>
     <string name="email_address">Email Address</string>
     <string name="phone">Mobile Number</string>
@@ -63,8 +153,8 @@
     <string name="recipe_for_getting">Recipe For Getting</string>
     <string name="order">ORDER</string>
     <string name="add_to_favorites">ADD TO FAVORITES</string>
-    <string name="rs_200_00">Rs 200.00</string>
-    <string name="meal_to_home">Meal To Home</string>
+<!--    <string name="rs_200_00">Rs 200.00</string>-->
+<!--    <string name="meal_to_home">Meal To Home</string>-->
     <string name="sri_lankan">Sri Lankan</string>
     <string name="indian">Indian</string>
     <string name="italian">Italian</string>
@@ -78,7 +168,7 @@
     <string name="leave_a_feedback">Leave a feedback</string>
     <string name="take_a_minute_to_write_a_review">take a minute to write a review</string>
     <string name="tell_us_what_you_feel">tell us what you feel</string>
-    <string name="submit">Submit</string>
+<!--    <string name="submit">Submit</string>-->
     <string name="contct_us">CONTCT US</string>
     <string name="e_mail">email:</string>
     <string name="message">Message:</string>
@@ -92,6 +182,10 @@
     <string name="thank_you_message">We will be in touch<br></br> with you shortly</string>
     <string name="back_to_home">Back To Home</string>
     <string name="rate_the_delivery">Rate the Delivery</string>
+    <string name="my_style_chicken_fride_rice_rs_200_00">My Style Chichek Fried Rice</string>
+    <string name="grallic_butter_carbs_rs_4200_00">Garlic Butter Crabs Rs.4200.00</string>
+    <string name="basmathi_rice_chiken_deval_fry_onion_chily_paste_vegetable_chopsy">Basmati Rice Chicken Deval Fry Onion Chily Paste Vegetable Chopsy</string>
 
 
-</resources>
+ </resources>
+
