@@ -67,32 +67,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="347dp"
-        android:layout_height="48dp"
+    <Spinner
+        android:id="@+id/spTWBranch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
-        android:text="@string/select_branch"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:backgroundTint="#B2BEB5"
+        android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />
+        app:layout_constraintTop_toBottomOf="@+id/etTWNo" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button6"-->
+<!--        android:layout_width="347dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/select_branch"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textStyle="bold"-->
+<!--        android:visibility="invisible"-->
+<!--        app:backgroundTint="#B2BEB5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />-->
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="125dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="50dp"
+        android:id="@+id/btnSubmitTWD"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/submit"
         app:backgroundTint="#08BC0F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+        app:layout_constraintTop_toBottomOf="@+id/etTWTime" />
 
     <View
         android:id="@+id/divider"
@@ -105,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine3"
+        android:id="@+id/etTWTime"
         android:layout_width="341dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -113,15 +124,15 @@
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/order_required_time"
-        android:inputType="textMultiLine"
+        android:inputType="time"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/spTWBranch" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine4"
+        android:id="@+id/etTWNo"
         android:layout_width="352dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -134,10 +145,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine5" />
+        app:layout_constraintTop_toBottomOf="@+id/etTWName" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine5"
+        android:id="@+id/etTWName"
         android:layout_width="344dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"

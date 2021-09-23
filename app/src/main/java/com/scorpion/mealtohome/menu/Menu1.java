@@ -17,6 +17,7 @@ import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.UpdateProfileActivity;
 import com.scorpion.mealtohome.login.Login;
 import com.scorpion.mealtohome.login.Login3;
+import com.scorpion.mealtohome.order.Orderdetails;
 
 import java.io.ByteArrayOutputStream;
 
@@ -24,7 +25,7 @@ public class Menu1 extends AppCompatActivity {
 
     Button btnSriLanka, btnIndian, btnItalian, btnChinese;
     TextView tvSL1, tvSL2, tvSL3,textView9,textView10,textView11;
-    ImageView imageView7,imageView8,imageView9,imgVProfile;
+    ImageView imageView7,imageView8,imageView9,imgVProfile,imgCart1;
     String S1,S2,S3;
 
     @Override
@@ -44,6 +45,7 @@ public class Menu1 extends AppCompatActivity {
         imageView7 = findViewById(R.id.imageView7);
         imageView8 = findViewById(R.id.imageView8);
         imageView9 = findViewById(R.id.imageView9);
+        imgCart1 = findViewById(R.id.imgCart1);
         textView9 = findViewById(R.id.textView9);
         textView10 = findViewById(R.id.textView10);
         textView11 = findViewById(R.id.textView11);
@@ -140,6 +142,15 @@ public class Menu1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Menu1.this, UpdateProfileActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        imgCart1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Menu1.this, Orderdetails.class);
                 startActivity(intent);
                 finish();
             }
