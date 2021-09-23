@@ -92,10 +92,10 @@ public class UpdateProfileActivity extends AppCompatActivity {
 
         final DocumentReference sDoc = db.collection("Customer").document(uid);
 
-        db.runTransaction(new com.google.firebase.firestore.Transaction.Function<Object>() {
+        db.runTransaction(new com.google.firebase.firestore.Transaction.Function<Void>() {
             @Nullable
             @Override
-            public Object apply(@NonNull com.google.firebase.firestore.Transaction transaction) throws FirebaseFirestoreException {
+            public Void apply(@NonNull com.google.firebase.firestore.Transaction transaction) throws FirebaseFirestoreException {
 
                 transaction.update(sDoc,"fullName",name);
                 transaction.update(sDoc,"phone",phone);
@@ -104,9 +104,9 @@ public class UpdateProfileActivity extends AppCompatActivity {
 
                 return null;
             }
-        }).addOnSuccessListener(new OnSuccessListener<Object>() {
+        }).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
-            public void onSuccess(Object o) {
+            public void onSuccess(Void o) {
                 Toast.makeText(UpdateProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {

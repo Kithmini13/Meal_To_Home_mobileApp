@@ -152,7 +152,7 @@
                 android:textColor="#070303"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/imageView14"
+                app:layout_constraintBottom_toTopOf="@+id/imgView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button4"
@@ -210,7 +210,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/title1" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnOder"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="16dp"
@@ -238,7 +238,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button7" />
+                app:layout_constraintTop_toBottomOf="@+id/btnOder" />
 
             <TextView
                 android:id="@+id/tvPrice"
