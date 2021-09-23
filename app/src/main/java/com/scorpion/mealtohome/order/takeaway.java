@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -29,13 +31,14 @@ import com.scorpion.mealtohome.login.Login3;
 
 import java.util.HashMap;
 
-public class takeaway extends AppCompatActivity {
+public class takeaway extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     Context mContext;
     Button btnSubmitTWD;
     EditText etTWName, etTWNo,etTWTime;
     Spinner spTWBranch;
     String cusTWName,cusID,cusTime;
+    private static final String[] paths = {"Colombo Branch", "Kandy Branch", "Kaluthara Branch","Jaffna Branch","Negambo Branch"};
 
     private ProgressDialog loadingBar;
 
@@ -56,6 +59,14 @@ public class takeaway extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(takeaway.this,
+                android.R.layout.simple_spinner_item,paths);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spTWBranch.setAdapter(adapter);
+        spTWBranch.setOnItemSelectedListener(this);
 
         btnSubmitTWD.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,5 +158,15 @@ public class takeaway extends AppCompatActivity {
             valid =false;
         }
         return valid;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
