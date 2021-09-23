@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MealToHome"
         tools:replace="android:icon">
         <activity
+            android:name=".PwymentMathordActivity"
+            android:exported="true" />
+        <activity
             android:name=".UpdateProfileActivity"
             android:exported="true" />
         <activity

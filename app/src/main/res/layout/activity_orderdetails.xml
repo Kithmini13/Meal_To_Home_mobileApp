@@ -145,15 +145,16 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:text="@string/spaghetti"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnDic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
-        android:text="@string/_1_add"
+        android:text="@string/_1_dic"
         app:backgroundTint="#08BC0F"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
         app:layout_constraintStart_toEndOf="@+id/textView10" />
@@ -165,9 +166,10 @@
         android:layout_marginStart="18dp"
         android:layout_marginEnd="18dp"
         android:text="@string/rs_440_00"
+        android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/btnDic" />
 
     <TextView
         android:id="@+id/textView12"
@@ -175,6 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:text="@string/rs_440_00"
+        android:visibility="invisible"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -185,28 +188,32 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:text="@string/total_bill"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvFullTot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/rs_640_00"
+        android:text="@string/rs_00_00"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnPayOder"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
         android:layout_marginEnd="12dp"
-        android:text="@string/done"
+        android:text="@string/payOder"
         app:backgroundTint="#08BC0F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFullTot" />
 
     <View
         android:id="@+id/divider"
@@ -283,6 +290,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:text="@string/rs"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".order.takeaway">
+    tools:context=".PwymentMathordActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -36,74 +36,65 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
         android:layout_marginTop="24dp"
-        android:text="@string/let_s_start_ordering"
+        android:text="@string/order_payment_details"
+        android:textAlignment="center"
         android:textColor="#08BC0F"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-    <Button
-        android:id="@+id/button4"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/deliver"
-        app:backgroundTint="#08BC0F"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/take_away"
-        app:backgroundTint="#B2BEB5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Spinner
-        android:id="@+id/spTWBranch"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTWNo" />
-
-<!--    <Button-->
-<!--        android:id="@+id/button6"-->
-<!--        android:layout_width="347dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_marginStart="28dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="@string/select_branch"-->
-<!--        android:textColor="#000000"-->
-<!--        android:textStyle="bold"-->
-<!--        android:visibility="invisible"-->
-<!--        app:backgroundTint="#B2BEB5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />-->
-
-    <Button
-        android:id="@+id/btnSubmitTWD"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/submit"
+        android:text="Now You Can Select Your Payment Method Type"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <Button
+        android:id="@+id/btnTW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/take_away"
+        android:textSize="25sp"
         app:backgroundTint="#08BC0F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTWTime" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/delivery"
+        android:textSize="25sp"
+        app:backgroundTint="#08BC0F"
+        app:layout_constraintBottom_toTopOf="@+id/divider5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTW"
+        app:layout_constraintVertical_bias="0.241"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/divider"
@@ -115,53 +106,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
 
-    <EditText
-        android:id="@+id/etTWTime"
-        android:layout_width="341dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/order_required_time"
-        android:inputType="time"
-        android:textColorHint="#000000"
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spTWBranch" />
+        tools:layout_editor_absoluteY="27dp"
+        tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/etTWNo"
-        android:layout_width="352dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/id_no"
-        android:inputType="textMultiLine"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTWName" />
-
-    <EditText
-        android:id="@+id/etTWName"
-        android:layout_width="344dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="@string/name"
-        android:inputType="textMultiLine"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <ImageView
         android:id="@+id/imageView10"
