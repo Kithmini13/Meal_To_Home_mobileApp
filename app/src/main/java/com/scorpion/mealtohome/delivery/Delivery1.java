@@ -31,10 +31,10 @@ import java.util.HashMap;
 
 public class Delivery1 extends AppCompatActivity {
     Context mContext;
-    EditText etPersonName,etAddress1,etAddress2,etContact;
+    EditText etPersonName,etAddress1,etAddress2,etContact,etOrderId;
     Button btnSubmit,btnCancel;
     private ProgressDialog loadingBar;
-    String cusDEName,delAdd1,delAdd2,cusNo;
+    String cusDEName,delAdd1,delAdd2,cusNo,orderId;
 
 
     private  String parentDBName = "Deliver";
@@ -50,6 +50,7 @@ public class Delivery1 extends AppCompatActivity {
         etAddress1 = findViewById(R.id.etAddress1);
         etAddress2 = findViewById(R.id.etAddress2);
         etContact = findViewById(R.id.etContact);
+        etOrderId = findViewById(R.id.etOrderId);
         btnSubmit = findViewById(R.id.btnSubmit);
         btnCancel = findViewById(R.id.btnCancel);
         loadingBar = new ProgressDialog(this);
@@ -88,25 +89,26 @@ public class Delivery1 extends AppCompatActivity {
         loadingBar.setMessage("Please Wait, While we are Checking the Credentials!..");
         loadingBar.show();
 
-        validateDeliveryOderCusNo(cusDEName,delAdd1,delAdd2,cusNo);
+        validateDeliveryOderCusNo(orderId,cusDEName,delAdd1,delAdd2,cusNo);
 
     }
 
-    private void validateDeliveryOderCusNo(String cusDEName, String delAdd1, String delAdd2, String cusNo) {
+    private void validateDeliveryOderCusNo(String orderId,String cusDEName, String delAdd1, String delAdd2, String cusNo) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(!(snapshot.child("Deliver").child(cusNo).exists())){
+                if(!(snapshot.child("Deliver").child(orderId).exists())){
                     HashMap<String, Object> deliveryMap = new HashMap<>();
+                    deliveryMap.put("orderID", orderId);
                     deliveryMap.put("cusNo", cusNo);
                     deliveryMap.put("cusName", cusDEName);
                     deliveryMap.put("add1", delAdd1);
                     deliveryMap.put("add2", delAdd2);
 
-                    RootRef.child("Deliver").child(cusNo).updateChildren(deliveryMap).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    RootRef.child("Deliver").child(orderId).updateChildren(deliveryMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()) {
@@ -121,7 +123,7 @@ public class Delivery1 extends AppCompatActivity {
                         }
                     });
                 }else {
-                    Toast.makeText(Delivery1.this, "This"+etContact+ " already exists.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Delivery1.this, "This"+etOrderId+ " already exists.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                     Toast.makeText(Delivery1.this, "Thank You!", Toast.LENGTH_SHORT).show();
                 }
@@ -135,6 +137,7 @@ public class Delivery1 extends AppCompatActivity {
     }
 
     private void initialize() {
+        orderId = etOrderId.getText().toString();
         cusDEName = etPersonName.getText().toString();
         delAdd1 = etAddress1.getText().toString();
         delAdd2 = etAddress2.getText().toString();
@@ -144,7 +147,10 @@ public class Delivery1 extends AppCompatActivity {
     private boolean validate() {
         boolean valid = true;
 
-        if(cusDEName.isEmpty() || cusDEName.length()>20){
+        if(orderId.isEmpty() || orderId.length()>10){
+            etOrderId.setError("Please Enter Valid Oder ID No");
+            valid =false;
+        }if(cusDEName.isEmpty() || cusDEName.length()>20){
             etPersonName.setError("Please Enter Valid Full Name");
             valid =false;
         }if(delAdd1.isEmpty() || delAdd1.length()>30){

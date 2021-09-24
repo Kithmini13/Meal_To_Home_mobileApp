@@ -78,7 +78,7 @@
     <string name="select_branch">Select branch</string>
     <string name="submit">SUBMIT</string>
     <string name="order_required_time">Order required time:</string>
-    <string name="id_no">ID No:</string>
+    <string name="id_no">Order ID No:</string>
     <string name="rs">Rs.</string>
 
     <string name="customer_order_history">CUSTOMER ORDER HISTORY</string>
