@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="20dp"
         android:text="@string/payment"
         android:textColor="#08BC0F"
         android:textSize="28sp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnCash"
         android:layout_width="208dp"
         android:layout_height="75dp"
         android:layout_marginTop="100dp"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnCard"
         android:layout_width="208dp"
         android:layout_height="75dp"
         android:layout_marginTop="40dp"
@@ -74,7 +74,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCash" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -83,7 +83,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/cash"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintEnd_toStartOf="@+id/btnCash"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <ImageView
@@ -93,66 +93,79 @@
         android:layout_marginTop="43dp"
         android:layout_marginEnd="33dp"
         android:src="@drawable/card"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/btnCard"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <ImageButton
-        android:id="@+id/imageButton13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="8dp"
-        android:background="#0000"
-        android:src="@drawable/ic_baseline_home_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/imageButton14"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="8dp"
-        android:background="#0000"
-        android:src="@drawable/shopping_crd"
+        android:background="@color/colorTopic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton13"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp">
 
-    <ImageButton
-        android:id="@+id/imageButton15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="8dp"
-        android:background="#0000"
-        android:src="@drawable/ic_baseline_favorite_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton14"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/imageButton13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="#0000"
+            android:src="@drawable/ic_baseline_home_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/imageButton16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="8dp"
-        android:background="#0000"
-        android:src="@drawable/ic_baseline_account_circle_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton15"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <ImageButton
+            android:id="@+id/imageButton14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="#0000"
+            android:src="@drawable/shopping_crd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton13"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <View
-        android:id="@+id/divider7"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginBottom="70dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageButton
+            android:id="@+id/imageButton15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="#0000"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton14"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/imageButton16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="8dp"
+            android:background="#0000"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton15"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="70dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

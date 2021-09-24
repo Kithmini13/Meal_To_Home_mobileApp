@@ -17,7 +17,7 @@ public class Orderdetails extends AppCompatActivity {
 
     TextView tvFO, tvFOTotal, tvOnePrice, tvFullTot;
     Button btnAdd1,btnDic1,btnPayOder;
-    String oderName, oderPrice;
+    String oderName, oderPrice,totAmount;
     private static int _counter = 1;
     private String _stringVal;
 
@@ -76,6 +76,9 @@ public class Orderdetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Orderdetails.this, PwymentMathordActivity.class);
+                totAmount = tvFullTot.getText().toString();
+                intent.putExtra("totalAmount", totAmount);
+
                 startActivity(intent);
                 finish();
             }

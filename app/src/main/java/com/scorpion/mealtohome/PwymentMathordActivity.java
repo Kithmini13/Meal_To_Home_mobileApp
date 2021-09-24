@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.scorpion.mealtohome.delivery.Delivery1;
 import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.menu.Menu1India;
 import com.scorpion.mealtohome.order.takeaway;
@@ -36,7 +37,7 @@ public class PwymentMathordActivity extends AppCompatActivity {
         btnDe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(PwymentMathordActivity.this, takeaway.class);
+                Intent intent=new Intent(PwymentMathordActivity.this, Delivery1.class);
                 startActivity(intent);
                 finish();
             }

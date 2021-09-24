@@ -15,13 +15,15 @@
     <string name="date_01">Date :</string>
     <string name="name_02">Name :</string>
     <string name="address">Address :</string>
+    <string name="address1">Address Line 1:</string>
+    <string name="address2">Address Line 2 :</string>
     <string name="location">Location :</string>
     <string name="make_payment">MAKE PAYMENT</string>
 
     <string name="meal_to_home_03">Meal To Home</string>
     <string name="payment">Payment</string>
     <string name="meal_to_home_04">Meal To Home</string>
-    <string name="chose_a_yayment_method">Chose a yayment method</string>
+    <string name="chose_a_yayment_method">Chose a Payment method</string>
     <string name="visa">Visa</string>
     <string name="master">Master</string>
     <string name="name_03">Name :</string>
@@ -76,7 +78,7 @@
     <string name="select_branch">Select branch</string>
     <string name="submit">SUBMIT</string>
     <string name="order_required_time">Order required time:</string>
-    <string name="id_no">ID No:</string>
+    <string name="id_no">Order ID No:</string>
     <string name="rs">Rs.</string>
 
     <string name="customer_order_history">CUSTOMER ORDER HISTORY</string>
