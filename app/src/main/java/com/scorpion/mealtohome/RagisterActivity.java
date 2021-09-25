@@ -170,7 +170,7 @@ public class RagisterActivity extends AppCompatActivity {
         }if(email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             etRegEmail.setError("Please Enter Valid Email");
             valid =false;
-        }if(phoneNo.isEmpty() || phoneNo.length()>10){
+        }if(phoneNo.isEmpty() || phoneNo.length()>10 || phoneNo.length()<10){
             etRegPhoneNo.setError("Please Enter Valid Phone Number");
             valid =false;
         }if(password.isEmpty() || password.length()<6){

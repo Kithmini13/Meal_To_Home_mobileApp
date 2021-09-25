@@ -114,7 +114,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/etContactName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/etContactEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -139,21 +139,22 @@
         android:inputType="none|text|textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/etContactName" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSendMsg"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="#2E7D32"
         android:text="@string/send_message"
+        android:layout_marginTop="10dp"
         android:textColor="#FAF6F6"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine4" />
+        app:layout_constraintTop_toBottomOf="@+id/etContactMsg" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -175,7 +176,7 @@
         android:src="@android:drawable/sym_action_email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendMsg"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -201,17 +202,18 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton2" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine4"
+        android:id="@+id/etContactMsg"
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="message"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/etContactEmail" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
