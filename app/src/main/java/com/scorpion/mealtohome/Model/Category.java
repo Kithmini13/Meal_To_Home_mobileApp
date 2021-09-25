@@ -1,32 +1,46 @@
 package com.scorpion.mealtohome.Model;
 
+import lombok.Data;
+
+@Data
 public class Category {
-    private String CategoryName;
-    private String price;
+
+    private String id;
+    private String cName;
+    private int price;
     private String img;
 
-    public Category() {
-    }
-
-    public Category(String categoryName, String price, String img) {
-        CategoryName = categoryName;
+    public Category(String id, String cName, int price, String img) {
+        this.id = id;
+        this.cName = cName;
         this.price = price;
         this.img = img;
     }
 
-    public String getCategoryName() {
-        return CategoryName;
+    public Category() {
     }
 
-    public void setCategoryName(String categoryName) {
-        CategoryName = categoryName;
+    public String getId() {
+        return id;
     }
 
-    public String getPrice() {
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getcName() {
+        return cName;
+    }
+
+    public void setcName(String cName) {
+        this.cName = cName;
+    }
+
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 

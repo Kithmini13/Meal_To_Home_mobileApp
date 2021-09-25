@@ -40,7 +40,7 @@ public class ContactUs extends AppCompatActivity {
     Context mContext;
     EditText etContactName, etContactEmail, etContactMsg;
     Button btnSendMsg;
-    int i = 0;
+    int i=0;
     String name, email, massage;
 
     private ProgressDialog loadingBar;
@@ -93,7 +93,7 @@ public class ContactUs extends AppCompatActivity {
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (!(snapshot.child("ContactUs").child(String.valueOf(i++)).exists())) {
+                if (!(snapshot.child("ContactUs").child(name).exists())) {
                     HashMap<String, Object> customerMap = new HashMap<>();
                     customerMap.put("name", name);
                     customerMap.put("email", email);
@@ -118,7 +118,12 @@ public class ContactUs extends AppCompatActivity {
                                             public void onClick(DialogInterface dialog, int which) {
                                                 startActivity(new Intent(mContext, Menu1.class));
                                             }
-                                        });
+                                        }).setNegativeButton("Update Details", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        startActivity(new Intent(mContext, ContactUs.class));
+                                    }
+                                });
 
                                 final AlertDialog alert = dialog.create();
                                 alert.show();
@@ -136,7 +141,7 @@ public class ContactUs extends AppCompatActivity {
                     loadingBar.dismiss();
                     Toast.makeText(mContext, "Please try again", Toast.LENGTH_SHORT).show();
 
-                    startActivity(new Intent(mContext, Login3.class));
+                    startActivity(new Intent(mContext, ContactUs.class));
                 }
             }
 
