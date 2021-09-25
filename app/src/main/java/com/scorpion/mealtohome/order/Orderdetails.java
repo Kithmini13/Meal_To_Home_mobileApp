@@ -77,6 +77,8 @@ public class Orderdetails extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(Orderdetails.this, PwymentMathordActivity.class);
                 totAmount = tvFullTot.getText().toString();
+                Log.e("src", "Amount.." + totAmount);
+
                 intent.putExtra("totalAmount", totAmount);
 
                 startActivity(intent);
