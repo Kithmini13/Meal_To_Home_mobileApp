@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
+import com.scorpion.mealtohome.delivery.Delivery1;
 import com.scorpion.mealtohome.feedback.LeaveAFeedback;
 import com.scorpion.mealtohome.menu.Menu1;
 
@@ -21,7 +23,7 @@ import java.util.Calendar;
 public class Payment4 extends AppCompatActivity {
 
     TextView tvSDate,tvType,tvPayAmount;
-    String amount,cardType;
+    String totAmount,amount,cardType;
     Calendar calendar;
     SimpleDateFormat dateFormat;
     String date1;
@@ -57,7 +59,11 @@ public class Payment4 extends AppCompatActivity {
         btnRatePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Payment4.this, LeaveAFeedback.class));
+                Intent intent=new Intent(Payment4.this, LeaveAFeedback.class);
+                totAmount = tvPayAmount.getText().toString();
+                intent.putExtra("totalAmount", totAmount);
+                startActivity(intent);
+                finish();
             }
         });
 
