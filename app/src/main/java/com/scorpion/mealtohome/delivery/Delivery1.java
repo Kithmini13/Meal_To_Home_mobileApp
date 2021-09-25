@@ -1,15 +1,18 @@
 package com.scorpion.mealtohome.delivery;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +29,7 @@ import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.Orderdetails;
 import com.scorpion.mealtohome.order.orderhistory;
 import com.scorpion.mealtohome.order.takeaway;
+import com.scorpion.mealtohome.payment.Payment1;
 
 import java.util.HashMap;
 
@@ -34,7 +38,8 @@ public class Delivery1 extends AppCompatActivity {
     EditText etPersonName,etAddress1,etAddress2,etContact,etOrderId;
     Button btnSubmit,btnCancel;
     private ProgressDialog loadingBar;
-    String cusDEName,delAdd1,delAdd2,cusNo,orderId;
+    TextView tvA1;
+    String cusDEName,delAdd1,delAdd2,cusNo,orderId,totAmount,amount;
 
 
     private  String parentDBName = "Deliver";
@@ -45,6 +50,11 @@ public class Delivery1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery1);
 
+        ActionBar actionBar = getSupportActionBar();
+
+        // showing the back button in action bar
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         mContext = this;
         etPersonName = findViewById(R.id.etPersonName);
         etAddress1 = findViewById(R.id.etAddress1);
@@ -53,9 +63,13 @@ public class Delivery1 extends AppCompatActivity {
         etOrderId = findViewById(R.id.etOrderId);
         btnSubmit = findViewById(R.id.btnSubmit);
         btnCancel = findViewById(R.id.btnCancel);
+        tvA1 = findViewById(R.id.tvA1);
         loadingBar = new ProgressDialog(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        amount = getIntent().getStringExtra("totalAmount");
+        tvA1.setText(amount);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +129,11 @@ public class Delivery1 extends AppCompatActivity {
                                 Toast.makeText(Delivery1.this, "Congratulation your Order is Successful!!", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                startActivity(new Intent(mContext, Delivery2.class));
+                                Intent intent=new Intent(mContext, Delivery2.class);
+                                totAmount = tvA1.getText().toString();
+                                intent.putExtra("totalAmount", totAmount);
+                                startActivity(intent);
+                                finish();
                             }else {
                                 loadingBar.dismiss();
                                 Toast.makeText(Delivery1.this, "Network Error Please try Again after some Time!!", Toast.LENGTH_SHORT).show();
@@ -166,4 +184,14 @@ public class Delivery1 extends AppCompatActivity {
         return valid;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                startActivity(new Intent(mContext, PwymentMathordActivity.class));
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

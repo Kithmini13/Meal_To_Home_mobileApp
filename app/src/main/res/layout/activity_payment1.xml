@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/btnCash"
-        android:layout_width="208dp"
+        android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="36dp"
@@ -65,7 +65,7 @@
 
     <Button
         android:id="@+id/btnCard"
-        android:layout_width="208dp"
+        android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="36dp"
@@ -78,22 +78,24 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="78dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="20dp"
         android:src="@drawable/cash"
         app:layout_constraintEnd_toStartOf="@+id/btnCash"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="113dp"
+        android:layout_width="100dp"
         android:layout_height="64dp"
         android:layout_marginTop="43dp"
-        android:layout_marginEnd="33dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/card"
         app:layout_constraintEnd_toStartOf="@+id/btnCard"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 
@@ -166,6 +168,16 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvA3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="558dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
