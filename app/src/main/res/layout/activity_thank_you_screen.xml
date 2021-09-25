@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".contactus.ThankYouScreen">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-70dp"
+        tools:layout_editor_absoluteY="114dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <View
         android:id="@+id/divider4"
         android:layout_width="match_parent"
@@ -50,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/green_dark"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,5 +125,6 @@
 <!--            app:layout_constraintStart_toStartOf="parent"-->
 <!--            app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
 <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@ public class Payment3 extends AppCompatActivity {
     Button btnPay,btnCancelPay;
     String totAmount,amount,cardType,cardTypes;
     String name,no,pin,date;
-    private ProgressDialog loadingBar;
+   static private ProgressDialog loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -9,61 +9,78 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.scorpion.mealtohome.Model.Category;
+import com.scorpion.mealtohome.MyAdapter;
 import com.scorpion.mealtohome.R;
-import com.scorpion.mealtohome.ViewHolder.CategoryViewHolder;
+
+import java.util.ArrayList;
 
 public class ThankYouScreen extends AppCompatActivity {
     RecyclerView recyclerView;
-//    FirebaseRecyclerAdapter<Category, CategoryViewHolder> recyclerAdapter;
+    //    FirebaseRecyclerAdapter<Category, CategoryViewHolder> recyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
-    FirebaseDatabase database;
-    DatabaseReference databaseReference;
+    DatabaseReference database;
+    public MyAdapter myAdapter;
+    ArrayList<Category> list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thank_you_screen);
 
-        database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference("Category");
-
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerView);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        //loadData();
+        database = FirebaseDatabase.getInstance().getReference("Category");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        list = new ArrayList<>();
+        loadList();
+        myAdapter = new MyAdapter(ThankYouScreen.this, list) {
+            @Override
+            public void updateList() {
+                loadList();
+                myAdapter.notifyDataSetChanged();
+                recyclerView.setAdapter(myAdapter);
+
+
+            }
+        };
+        recyclerView.setAdapter(myAdapter);
     }
 
-//    private void loadData()
-//    {
-//        FirebaseRecyclerOptions options =
-//                new FirebaseRecyclerOptions.Builder<Category>()
-//                        .setQuery(databaseReference,Category.class)
-//                        .build();
-//
-//        recyclerAdapter = new FirebaseRecyclerAdapter<Category, CategoryViewHolder>(options) {
-//            @Override
-//            protected void onBindViewHolder(@NonNull CategoryViewHolder holder, int position, @NonNull Category model) {
-//
-//                holder.tvCategoryName.setText(model.getCategoryName());
-//                holder.tvPrice.setText(model.getPrice());
-//
-//            }
-//
-//            @NonNull
-//            @Override
-//            public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-//                View view = LayoutInflater.from(viewGroup.getContext())
-//                        .inflate(R.layout.item_view,viewGroup,false);
-//                return new CategoryViewHolder(view);
-//            }
-//        };
-//        recyclerAdapter.notifyDataSetChanged();
-//        recyclerAdapter.startListening();
-//        recyclerView.setAdapter(recyclerAdapter);
-//    }
+    private void loadList() {
+
+        database.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    if (dataSnapshot.getValue() != null) {
+                        System.out.println(dataSnapshot.getValue());
+                        Category category = dataSnapshot.getValue(Category.class);
+                        category.setId(dataSnapshot.getKey());
+                        list.add(category);
+                    }
+                }
+                myAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
 }

@@ -55,8 +55,15 @@
         <activity
             android:name=".feedback.LeaveAFeedback"
             android:theme="@style/Theme.MealToHome" />
-        <activity android:name=".contactus.ThankYouScreen" />
-        <activity android:name=".contactus.ContactUs" />
+        <activity android:name=".contactus.ThankYouScreen">
+
+        </activity>
+        <activity android:name=".contactus.ContactUs" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".payment.Payment1"

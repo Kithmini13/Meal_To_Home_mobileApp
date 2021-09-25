@@ -39,16 +39,28 @@
             android:textColor="#000"
             android:textSize="18sp" />
 
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/offer" />
+
+        <Button
+            android:id="@+id/btnDeleteOfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPrice"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="23dp"
+            android:layout_toEndOf="@+id/img"
+            android:background="@color/green_dark"
+            android:text="Delete Offer" />
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="16dp"
-        app:srcCompat="@drawable/carbs" />
+
 </androidx.cardview.widget.CardView>
