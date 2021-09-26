@@ -53,9 +53,21 @@
         </activity>
         <activity
             android:name=".login.Login3"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".login.Login2" />
-        <activity android:name=".login.Login1" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.Login2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.Login1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity android:name=".menu.Menu1" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

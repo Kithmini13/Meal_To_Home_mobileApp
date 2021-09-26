@@ -21,6 +21,7 @@ import com.scorpion.mealtohome.MyAdapter;
 import com.scorpion.mealtohome.MyTakewayAdapter;
 import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.contactus.ThankYouScreen;
+import com.scorpion.mealtohome.menu.Menu3;
 import com.scorpion.mealtohome.payment.Payment1;
 import com.scorpion.mealtohome.payment.Payment2;
 
@@ -67,7 +68,7 @@ public class orderhistory extends AppCompatActivity {
         btnUpdateMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(orderhistory.this, ThankYouScreen.class);
+                Intent intent=new Intent(orderhistory.this, Menu3.class);
                 startActivity(intent);
                 finish();
             }
