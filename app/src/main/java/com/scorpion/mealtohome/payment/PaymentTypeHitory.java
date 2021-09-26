@@ -1,4 +1,4 @@
-package com.scorpion.mealtohome.order;
+package com.scorpion.mealtohome.payment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,50 +12,50 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.scorpion.mealtohome.Model.Category;
+import com.scorpion.mealtohome.Model.PaymentType;
 import com.scorpion.mealtohome.Model.Takeaway;
-import com.scorpion.mealtohome.MyAdapter;
+import com.scorpion.mealtohome.MyPaymentAdapter;
 import com.scorpion.mealtohome.MyTakewayAdapter;
 import com.scorpion.mealtohome.R;
-import com.scorpion.mealtohome.contactus.ThankYouScreen;
+import com.scorpion.mealtohome.order.orderhistory;
 
 import java.util.ArrayList;
 
-public class orderhistory extends AppCompatActivity {
+public class PaymentTypeHitory extends AppCompatActivity {
 
-    RecyclerView rvTakeaway;
+    RecyclerView rvPaymentHistory;
     RecyclerView.LayoutManager layoutManager;
     DatabaseReference database;
-    public MyTakewayAdapter myAdapter;
-    ArrayList<Takeaway> list;
+    public MyPaymentAdapter myAdapter;
+    ArrayList<PaymentType> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_orderhistory);
+        setContentView(R.layout.activity_payment_type_hitory);
 
-        rvTakeaway = (RecyclerView) findViewById(R.id.rvTakeaway);
-        rvTakeaway.setHasFixedSize(true);
+        rvPaymentHistory = (RecyclerView) findViewById(R.id.rvPaymentHistory);
+        rvPaymentHistory.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
-        rvTakeaway.setLayoutManager(layoutManager);
+        rvPaymentHistory.setLayoutManager(layoutManager);
 
-        database = FirebaseDatabase.getInstance().getReference("Takeaway");
-        rvTakeaway.setHasFixedSize(true);
-        rvTakeaway.setLayoutManager(new LinearLayoutManager(this));
+        database = FirebaseDatabase.getInstance().getReference("Payment");
+        rvPaymentHistory.setHasFixedSize(true);
+        rvPaymentHistory.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
         loadList();
-        myAdapter = new MyTakewayAdapter(orderhistory.this, list) {
+        myAdapter = new MyPaymentAdapter(PaymentTypeHitory.this, list) {
             @Override
             public void updateList() {
                 loadList();
                 myAdapter.notifyDataSetChanged();
-                rvTakeaway.setAdapter(myAdapter);
+                rvPaymentHistory.setAdapter(myAdapter);
 
 
             }
         };
-        rvTakeaway.setAdapter(myAdapter);
+        rvPaymentHistory.setAdapter(myAdapter);
     }
 
     private void loadList() {
@@ -67,9 +67,9 @@ public class orderhistory extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     if (dataSnapshot.getValue() != null) {
                         System.out.println(dataSnapshot.getValue());
-                        Takeaway takeaway = dataSnapshot.getValue(Takeaway.class);
-                        takeaway.setId(dataSnapshot.getKey());
-                        list.add(takeaway);
+                        PaymentType paymentType = dataSnapshot.getValue(PaymentType.class);
+                        paymentType.setId(dataSnapshot.getKey());
+                        list.add(paymentType);
                     }
                 }
                 myAdapter.notifyDataSetChanged();
