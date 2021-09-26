@@ -37,7 +37,8 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
     Button btnSubmitTWD;
     EditText etTWName, etTWNo,etTWTime;
     Spinner spTWBranch;
-    String cusTWName,cusID,cusTime;
+    String cusTWName,cusID,cusTime,branch;
+    String dr1;
     private static final String[] paths = {"Colombo Branch", "Kandy Branch", "Kaluthara Branch","Jaffna Branch","Negambo Branch"};
 
     private ProgressDialog loadingBar;
@@ -91,11 +92,12 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
         loadingBar.setMessage("Please Wait, While we are Checking the Credentials!..");
         loadingBar.show();
 
-        validateOderId(cusTWName,cusID,cusTime);
+
+        validateOderId(cusTWName,cusID,cusTime,branch);
 
     }
 
-    private void validateOderId(final String cusTWName, final String cusID, final String cusTime) {
+    private void validateOderId(final String cusTWName, final String cusID, final String cusTime,String branch) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
 
@@ -105,6 +107,7 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
                 if(!(snapshot.child("Takeaway").child(cusID).exists())){
                     HashMap<String, Object> takeawayMap = new HashMap<>();
                     takeawayMap.put("cusID", cusID);
+                    takeawayMap.put("branch", branch);
                     takeawayMap.put("cusTWName", cusTWName);
                     takeawayMap.put("cusTime", cusTime);
 
@@ -142,6 +145,7 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
         cusTWName = etTWName.getText().toString();
         cusID = etTWNo.getText().toString();
         cusTime = etTWTime.getText().toString();
+        branch = spTWBranch.getSelectedItem().toString();
     }
 
     private boolean validate() {
@@ -162,6 +166,13 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//        switch (i){
+//            case 0:
+//               dr1  = "Colombo Branch";
+//                break;
+//
+//        }
 
     }
 

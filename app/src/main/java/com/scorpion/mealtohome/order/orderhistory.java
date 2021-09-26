@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,6 +21,8 @@ import com.scorpion.mealtohome.MyAdapter;
 import com.scorpion.mealtohome.MyTakewayAdapter;
 import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.contactus.ThankYouScreen;
+import com.scorpion.mealtohome.payment.Payment1;
+import com.scorpion.mealtohome.payment.Payment2;
 
 import java.util.ArrayList;
 
@@ -28,12 +33,14 @@ public class orderhistory extends AppCompatActivity {
     DatabaseReference database;
     public MyTakewayAdapter myAdapter;
     ArrayList<Takeaway> list;
+    Button btnUpdateMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orderhistory);
 
+        btnUpdateMenu = findViewById(R.id.btnUpdateMenu);
         rvTakeaway = (RecyclerView) findViewById(R.id.rvTakeaway);
         rvTakeaway.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
@@ -56,6 +63,15 @@ public class orderhistory extends AppCompatActivity {
             }
         };
         rvTakeaway.setAdapter(myAdapter);
+
+        btnUpdateMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(orderhistory.this, ThankYouScreen.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void loadList() {
