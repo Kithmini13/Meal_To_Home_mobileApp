@@ -142,6 +142,7 @@ public class Menu1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Menu1.this, UpdateProfileActivity.class);
+                intent.putExtra("phoneNo",getIntent().getStringExtra("phoneNo"));
                 startActivity(intent);
                 finish();
             }
