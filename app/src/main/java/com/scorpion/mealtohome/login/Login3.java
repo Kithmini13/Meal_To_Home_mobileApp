@@ -101,7 +101,7 @@ public class Login3 extends AppCompatActivity {
                             loadingBar.dismiss();
 
                             Intent b = new Intent(Login3.this, Menu1.class);
-//                            b.putExtra("phoneNo",phone);
+                            b.putExtra("phoneNo",phone);
                             startActivity(b);
 
                         }
