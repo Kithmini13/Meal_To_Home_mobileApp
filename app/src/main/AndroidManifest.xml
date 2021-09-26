@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MealToHome"
         tools:replace="android:icon">
         <activity
+            android:name=".UpdateDeliveryActivity"
+            android:exported="true" />
+        <activity
             android:name=".payment.PaymentTypeHitory"
             android:exported="true" />
         <activity
@@ -38,7 +41,7 @@
             android:name=".RagisterActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".menu.Menu3" >
+        <activity android:name=".menu.Menu3">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -62,7 +65,7 @@
         <activity
             android:name=".feedback.LeaveAFeedback"
             android:theme="@style/Theme.MealToHome" />
-        <activity android:name=".contactus.ThankYouScreen"/>
+        <activity android:name=".contactus.ThankYouScreen" />
         <activity android:name=".contactus.ContactUs">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

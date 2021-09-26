@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateDeliveryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-70dp"
+        tools:layout_editor_absoluteY="114dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="173dp"
+                android:layout_height="111dp"
+                android:background="@drawable/images"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="201dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/meal_to_home"
+                android:textColor="#08BC0F"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="100dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="230dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="24dp"
+                android:text="Update Detail"
+                android:textColor="#08BC0F"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            </androidx.recyclerview.widget.RecyclerView>
+<!--            <TextView-->
+<!--                android:id="@+id/textView7"-->
+<!--                android:layout_width="168dp"-->
+<!--                android:layout_height="26dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="@string/name"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/etOrderId1" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etPersonName1"-->
+<!--                android:layout_width="344dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:minHeight="48dp"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView7"-->
+<!--                tools:ignore="SpeakableTextPresentCheck" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etOrderId1"-->
+<!--                android:layout_width="344dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="text"-->
+<!--                android:minHeight="48dp"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView39"-->
+<!--                tools:ignore="SpeakableTextPresentCheck" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView11"-->
+<!--                android:layout_width="178dp"-->
+<!--                android:layout_height="31dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="@string/address1"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/etPersonName1" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etAddress11"-->
+<!--                android:layout_width="350dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="text"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView11"-->
+<!--                tools:ignore="SpeakableTextPresentCheck" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView12"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="@string/address2"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/etAddress11" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etAddress21"-->
+<!--                android:layout_width="348dp"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="text"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView12"-->
+<!--                tools:ignore="SpeakableTextPresentCheck" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView13"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="@string/contact_no"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/etAddress21" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/etContact1"-->
+<!--                android:layout_width="347dp"-->
+<!--                android:layout_height="55dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:ems="10"-->
+<!--                android:inputType="phone"-->
+<!--                android:textSize="20sp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView13"-->
+<!--                tools:ignore="SpeakableTextPresentCheck" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnUpdateDelivery1"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="28dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:background="#08BC0F"-->
+<!--                android:text="SUBMIT"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/etContact1" />-->
+
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView39"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="@string/id_no"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvA1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:visibility="gone"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                tools:layout_editor_absoluteY="823dp"-->
+<!--                tools:ignore="MissingConstraints" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

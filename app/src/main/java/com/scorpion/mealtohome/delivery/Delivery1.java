@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -23,25 +24,28 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.auth.User;
+import com.scorpion.mealtohome.Model.Order;
 import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
+import com.scorpion.mealtohome.UpdateDeliveryActivity;
 import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.Orderdetails;
 import com.scorpion.mealtohome.order.orderhistory;
 import com.scorpion.mealtohome.order.takeaway;
 import com.scorpion.mealtohome.payment.Payment1;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Delivery1 extends AppCompatActivity {
     Context mContext;
     EditText etPersonName,etAddress1,etAddress2,etContact,etOrderId;
-    Button btnSubmit,btnCancel;
+    Button btnSubmit,btnCancel,btnUpdateDelivery;
     private ProgressDialog loadingBar;
     TextView tvA1;
     String cusDEName,delAdd1,delAdd2,cusNo,orderId,totAmount,amount;
-
-
+    private DatabaseReference database;
     private  String parentDBName = "Deliver";
     private FirebaseAuth firebaseAuth;
 
@@ -63,6 +67,7 @@ public class Delivery1 extends AppCompatActivity {
         etOrderId = findViewById(R.id.etOrderId);
         btnSubmit = findViewById(R.id.btnSubmit);
         btnCancel = findViewById(R.id.btnCancel);
+        btnUpdateDelivery = findViewById(R.id.btnUpdateDelivery);
         tvA1 = findViewById(R.id.tvA1);
         loadingBar = new ProgressDialog(this);
 
@@ -82,6 +87,15 @@ public class Delivery1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Delivery1.this, PwymentMathordActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnUpdateDelivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery1.this, UpdateDeliveryActivity.class);
                 startActivity(intent);
                 finish();
             }
