@@ -82,6 +82,7 @@
     <string name="rs">Rs.</string>
 
     <string name="customer_order_history">CUSTOMER ORDER HISTORY</string>
+    <string name="payment_history">PAYMENT HISTORY</string>
     <string name="order_type">Order type</string>
 
     <string name="order_description">Order description</string>

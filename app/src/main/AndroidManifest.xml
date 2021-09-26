@@ -17,6 +17,9 @@
         android:theme="@style/Theme.MealToHome"
         tools:replace="android:icon">
         <activity
+            android:name=".payment.PaymentTypeHitory"
+            android:exported="true" />
+        <activity
             android:name=".PwymentMathordActivity"
             android:exported="true" />
         <activity
@@ -55,13 +58,10 @@
         <activity
             android:name=".feedback.LeaveAFeedback"
             android:theme="@style/Theme.MealToHome" />
-        <activity android:name=".contactus.ThankYouScreen">
-
-        </activity>
-        <activity android:name=".contactus.ContactUs" >
+        <activity android:name=".contactus.ThankYouScreen"></activity>
+        <activity android:name=".contactus.ContactUs">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
