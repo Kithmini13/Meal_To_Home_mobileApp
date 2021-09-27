@@ -103,6 +103,7 @@ public class Payment3 extends AppCompatActivity {
         intent.putExtra("totalAmount", totAmount);
         intent.putExtra("cardType", cardTypes);
         startActivity(intent);
+        loadingBar.dismiss();
         finish();
     }
 
@@ -137,9 +138,12 @@ public class Payment3 extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 startActivity(new Intent(mContext, Payment2.class));
+
                 this.finish();
                 return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

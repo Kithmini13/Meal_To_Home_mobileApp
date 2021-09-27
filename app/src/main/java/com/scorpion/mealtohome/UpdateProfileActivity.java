@@ -47,12 +47,6 @@ public class UpdateProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_profile);
 
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        uid = user.getUid();
-//        phone = user.getPhoneNumber();
-//        Toast.makeText(this,phone,Toast.LENGTH_LONG).show();
-//        documentReference = db.collection("Customer").document(uid);
-
         database = FirebaseDatabase.getInstance().getReference("Customer").child(getIntent().getStringExtra("phoneNo"));
 
         etRegFullName = findViewById(R.id.etFullNameUp);
@@ -86,27 +80,6 @@ public class UpdateProfileActivity extends AppCompatActivity {
             }
         });
 
-/*
-        documentReference.get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if (task.getResult().exists()) {
-                            String fullName = task.getResult().getString("fullName");
-                            String phone = task.getResult().getString("phone");
-                            String email = task.getResult().getString("email");
-                            String password = task.getResult().getString("password");
-
-                            etRegFullName.setText(fullName);
-                            etRegPhoneNo.setText(phone);
-                            etRegEmail.setText(email);
-                            etRegPassword.setText(password);
-                        } else {
-                            Toast.makeText(UpdateProfileActivity.this, "No Profile", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });*/
     }
 
     @Override
@@ -125,33 +98,9 @@ public class UpdateProfileActivity extends AppCompatActivity {
         d.put("phone",phone);
         d.put("email",email);
         d.put("password",password);
-        database.setValue(d).addOnCompleteListener(task -> Toast.makeText(UpdateProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show());
+        database.setValue(d).addOnCompleteListener(task ->
+                Toast.makeText(UpdateProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show());
 
 
-//        final DocumentReference sDoc = db.collection("Customer").document(uid);
-//
-//        db.runTransaction(new com.google.firebase.firestore.Transaction.Function<Void>() {
-//            @Nullable
-//            @Override
-//            public Void apply(@NonNull com.google.firebase.firestore.Transaction transaction) throws FirebaseFirestoreException {
-//
-//                transaction.update(sDoc,"fullName",name);
-//                transaction.update(sDoc,"phone",phone);
-//                transaction.update(sDoc,"email",email);
-//                transaction.update(sDoc,"password",password);
-//
-//                return null;
-//            }
-//        }).addOnSuccessListener(new OnSuccessListener<Void>() {
-//            @Override
-//            public void onSuccess(Void o) {
-//                Toast.makeText(UpdateProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(UpdateProfileActivity.this, "Profile Update Fail", Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 }
