@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "653008151140",
+    "firebase_url": "https://mealtohome-scorpion-default-rtdb.firebaseio.com",
     "project_id": "mealtohome-scorpion",
     "storage_bucket": "mealtohome-scorpion.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "653008151140-96oukgb2poe79p32iccso3t2vfj4mp42.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scorpion.mealtohome",
+            "certificate_hash": "dbc48215f36721861beb32b39eb204a29d36f865"
+          }
+        },
         {
           "client_id": "653008151140-fp86vnggokls5nh756tnth7jj63k9qjk.apps.googleusercontent.com",
           "client_type": 3
