@@ -96,7 +96,7 @@ public class Login1 extends AppCompatActivity {
                 } else {
                     // if OTP field is not empty calling
                     // method to verify the OTP.
-                    verifyCode(etPhoneNo.getText().toString());
+//                    verifyCode(etPhoneNo.getText().toString()); // 1
                 }
             }
         });
@@ -160,23 +160,25 @@ public class Login1 extends AppCompatActivity {
         // receive OTP from Firebase.
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-            // below line is used for getting OTP code
-            // which is sent in phone auth credentials.
-            final String code = phoneAuthCredential.getSmsCode();
+            signInWithCredential(phoneAuthCredential);
 
-            // checking if the code
-            // is null or not.
-            if (code != null) {
-                // if the code is not null then
-                // we are setting that code to
-                // our OTP edittext field.
-                etOTP.setText(code);
-
-                // after setting this code
-                // to OTP edittext field we
-                // are calling our verifycode method.
-                verifyCode(code);
-            }
+//            // below line is used for getting OTP code
+//            // which is sent in phone auth credentials.
+//            final String code = phoneAuthCredential.getSmsCode();
+//
+//            // checking if the code
+//            // is null or not.
+//            if (code != null) {
+//                // if the code is not null then
+//                // we are setting that code to
+//                // our OTP edittext field.
+//                etOTP.setText(code);
+//
+//                // after setting this code
+//                // to OTP edittext field we
+//                // are calling our verifycode method.
+//                verifyCode(code); // 2
+//            }
         }
 
         // this method is called when firebase doesn't
