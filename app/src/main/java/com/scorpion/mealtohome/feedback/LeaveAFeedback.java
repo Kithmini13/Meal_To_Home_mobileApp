@@ -19,6 +19,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.delivery.Delivery2;
 import com.scorpion.mealtohome.login.Login3;
 import com.scorpion.mealtohome.menu.Menu1;
+import com.scorpion.mealtohome.order.Orderdetails;
 import com.scorpion.mealtohome.payment.Payment1;
 import com.scorpion.mealtohome.payment.Payment4;
 
@@ -52,6 +54,7 @@ public class LeaveAFeedback extends AppCompatActivity {
     RatingBar ratingBarDelivery;
     String amount,amounts,rateCount,feedback;
     int i=0;
+    ImageView imageView13,imageView11,imageView12;
 
     private ProgressDialog loadingBar;
 
@@ -78,6 +81,11 @@ public class LeaveAFeedback extends AppCompatActivity {
         etFeedbackMsg = findViewById(R.id.etFeedbackMsg);
         btnCln = findViewById(R.id.btnCln);
         tvA6 = findViewById(R.id.tvA6);
+
+        imageView13 = findViewById(R.id.imageView13);
+        imageView11 = findViewById(R.id.imageView11);
+        imageView12 = findViewById(R.id.imageView12);
+
         loadingBar = new ProgressDialog(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -143,6 +151,28 @@ public class LeaveAFeedback extends AppCompatActivity {
             }
         });
 
+        imageView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LeaveAFeedback.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LeaveAFeedback.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LeaveAFeedback.this, ContactUs.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void addFeedback() {

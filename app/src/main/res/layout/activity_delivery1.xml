@@ -309,7 +309,7 @@
                     android:layout_marginBottom="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/imageView10"
-                    app:srcCompat="@drawable/ic_baseline_favorite"
+                    app:srcCompat="@drawable/contact_us"
                     tools:ignore="VectorDrawableCompat" />
 
                 <ImageView

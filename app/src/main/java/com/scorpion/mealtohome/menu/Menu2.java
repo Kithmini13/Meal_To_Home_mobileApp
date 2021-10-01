@@ -71,6 +71,7 @@ public class Menu2 extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                startActivity(new Intent(Menu2.this, Menu1.class));
                 this.finish();
                 return true;
         }

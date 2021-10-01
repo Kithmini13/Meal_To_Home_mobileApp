@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,9 +29,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.scorpion.mealtohome.R;
+import com.scorpion.mealtohome.UpdateProfileActivity;
 import com.scorpion.mealtohome.feedback.LeaveAFeedback;
 import com.scorpion.mealtohome.login.Login3;
 import com.scorpion.mealtohome.menu.Menu1;
+import com.scorpion.mealtohome.order.Orderdetails;
 
 import java.util.HashMap;
 
@@ -42,6 +45,7 @@ public class ContactUs extends AppCompatActivity {
     Button btnSendMsg;
     int i=0;
     String name, email, massage;
+    ImageView imageView11,imageView12,imageView13,imageView14;
 
     private ProgressDialog loadingBar;
 
@@ -63,6 +67,10 @@ public class ContactUs extends AppCompatActivity {
         etContactEmail = findViewById(R.id.etContactEmail);
         etContactMsg = findViewById(R.id.etContactMsg);
         btnSendMsg = findViewById(R.id.btnSendMsg);
+        imageView11 = findViewById(R.id.imageView11);
+        imageView12 = findViewById(R.id.imageView12);
+        imageView13 = findViewById(R.id.imageView13);
+        imageView14 = findViewById(R.id.imageView14);
 
         loadingBar = new ProgressDialog(this);
 
@@ -72,6 +80,37 @@ public class ContactUs extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendContactUs();
+            }
+        });
+
+        imageView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ContactUs.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ContactUs.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent=new Intent(ContactUs.this, UpdateProfileActivity.class);
+//                intent.putExtra("phoneNo",getIntent().getStringExtra("phoneNo"));
+//                startActivity(intent);
+//                finish();
+            }
+        });imageView14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(ContactUs.this, ContactUs.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
+import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.delivery.Delivery1;
 import com.scorpion.mealtohome.login.Login3;
 import com.scorpion.mealtohome.menu.Menu1;
@@ -52,6 +54,7 @@ public class Payment2 extends AppCompatActivity {
 
     private  String parentDBName = "Payment";
     private FirebaseAuth firebaseAuth;
+    ImageView imageView13,imageView14,imageView15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +74,9 @@ public class Payment2 extends AppCompatActivity {
         btnPaymentSubmit = findViewById(R.id.btnPaymentSubmit);
         radioBtnMaster = findViewById(R.id.radioBtnMaster);
         radioBtnVisa = findViewById(R.id.radioBtnVisa);
+        imageView13 = findViewById(R.id.imageButton13);
+        imageView14 = findViewById(R.id.imageButton14);
+        imageView15 = findViewById(R.id.imageButton15);
 
         loadingBar = new ProgressDialog(this);
 
@@ -95,6 +101,29 @@ public class Payment2 extends AppCompatActivity {
                 }
 
                 paymentForOrder();
+            }
+        });
+
+        imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment2.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment2.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment2.this, ContactUs.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

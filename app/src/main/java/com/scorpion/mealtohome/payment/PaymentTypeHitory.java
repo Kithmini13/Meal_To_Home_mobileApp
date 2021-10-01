@@ -1,11 +1,14 @@
 package com.scorpion.mealtohome.payment;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,6 +20,7 @@ import com.scorpion.mealtohome.Model.Takeaway;
 import com.scorpion.mealtohome.MyPaymentAdapter;
 import com.scorpion.mealtohome.MyTakewayAdapter;
 import com.scorpion.mealtohome.R;
+import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.orderhistory;
 
 import java.util.ArrayList;
@@ -33,6 +37,12 @@ public class PaymentTypeHitory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_type_hitory);
+
+        ActionBar actionBar = getSupportActionBar();
+
+        // showing the back button in action bar
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
 
         rvPaymentHistory = (RecyclerView) findViewById(R.id.rvPaymentHistory);
         rvPaymentHistory.setHasFixedSize(true);
@@ -81,5 +91,18 @@ public class PaymentTypeHitory extends AppCompatActivity {
 
             }
         });
+    }
+
+    // this event will enable the back
+    // function to the button on press
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                startActivity(new Intent(PaymentTypeHitory.this, Menu1.class));
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

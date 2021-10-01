@@ -13,12 +13,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
+import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.menu.Menu1;
+import com.scorpion.mealtohome.order.Orderdetails;
 
 public class Payment3 extends AppCompatActivity {
 
@@ -29,6 +32,7 @@ public class Payment3 extends AppCompatActivity {
     String totAmount,amount,cardType,cardTypes;
     String name,no,pin,date;
    static private ProgressDialog loadingBar;
+    ImageView imageView13,imageView14,imageView15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,9 @@ public class Payment3 extends AppCompatActivity {
         btnCancelPay = findViewById(R.id.btnCancelPay);
         tvA5 = findViewById(R.id.tvA5);
         tvCA = findViewById(R.id.tvCA);
+        imageView13 = findViewById(R.id.imageButton13);
+        imageView14 = findViewById(R.id.imageButton14);
+        imageView15 = findViewById(R.id.imageButton15);
 
 
         loadingBar = new ProgressDialog(this);
@@ -74,6 +81,29 @@ public class Payment3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 paymentForOrder();
+            }
+        });
+
+        imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment3.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment3.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Payment3.this, ContactUs.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

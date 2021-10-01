@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -18,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.scorpion.mealtohome.Model.Delivery;
 import com.scorpion.mealtohome.Model.Menu;
 import com.scorpion.mealtohome.Model.Order;
+import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.menu.Menu3;
 
 import java.util.ArrayList;
@@ -93,6 +95,7 @@ public class UpdateDeliveryActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                startActivity(new Intent(UpdateDeliveryActivity.this, Menu1.class));
                 this.finish();
                 return true;
         }

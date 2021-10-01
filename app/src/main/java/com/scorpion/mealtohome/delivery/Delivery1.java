@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ import com.scorpion.mealtohome.Model.Order;
 import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.UpdateDeliveryActivity;
+import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.Orderdetails;
 import com.scorpion.mealtohome.order.orderhistory;
@@ -48,6 +50,7 @@ public class Delivery1 extends AppCompatActivity {
     private DatabaseReference database;
     private  String parentDBName = "Deliver";
     private FirebaseAuth firebaseAuth;
+    ImageView imageView13,imageView11,imageView12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,9 @@ public class Delivery1 extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
         btnCancel = findViewById(R.id.btnCancel);
         btnUpdateDelivery = findViewById(R.id.btnUpdateDelivery);
+        imageView13 = findViewById(R.id.imageView13);
+        imageView11 = findViewById(R.id.imageView11);
+        imageView12 = findViewById(R.id.imageView12);
         tvA1 = findViewById(R.id.tvA1);
         loadingBar = new ProgressDialog(this);
 
@@ -96,6 +102,29 @@ public class Delivery1 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Delivery1.this, UpdateDeliveryActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery1.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery1.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery1.this, ContactUs.class);
                 startActivity(intent);
                 finish();
             }
