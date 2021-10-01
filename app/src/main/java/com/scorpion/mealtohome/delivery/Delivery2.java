@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +28,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.UpdateProfileActivity;
+import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.Orderdetails;
 import com.scorpion.mealtohome.payment.Payment1;
@@ -39,6 +42,7 @@ public class Delivery2 extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
     DocumentReference documentReference;
+    ImageView imageView13,imageView11,imageView12;
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -61,6 +65,9 @@ public class Delivery2 extends AppCompatActivity {
         tvAdd2 = findViewById(R.id.tvAdd2);
         btnMakePayment = findViewById(R.id.btnMakePayment);
         tvA2 = findViewById(R.id.tvA2);
+        imageView13 = findViewById(R.id.imageView13);
+        imageView11 = findViewById(R.id.imageView11);
+        imageView12 = findViewById(R.id.imageView12);
 
         amount = getIntent().getStringExtra("totalAmount");
         tvA2.setText(amount);
@@ -71,6 +78,29 @@ public class Delivery2 extends AppCompatActivity {
                 Intent intent=new Intent(Delivery2.this, Payment1.class);
                 totAmount = tvA2.getText().toString();
                 intent.putExtra("totalAmount", totAmount);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery2.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery2.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery2.this, ContactUs.class);
                 startActivity(intent);
                 finish();
             }

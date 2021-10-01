@@ -1,6 +1,7 @@
 package com.scorpion.mealtohome.order;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -8,11 +9,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -27,7 +30,10 @@ import com.google.firebase.database.ValueEventListener;
 import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.RagisterActivity;
+import com.scorpion.mealtohome.contactus.ContactUs;
+import com.scorpion.mealtohome.delivery.Delivery2;
 import com.scorpion.mealtohome.login.Login3;
+import com.scorpion.mealtohome.menu.Menu1;
 
 import java.util.HashMap;
 
@@ -39,6 +45,7 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
     Spinner spTWBranch;
     String cusTWName,cusID,cusTime,branch;
     String dr1;
+    ImageView imageView13,imageView11,imageView12;
     private static final String[] paths = {"Colombo Branch", "Kandy Branch", "Kaluthara Branch","Jaffna Branch","Negambo Branch"};
 
     private ProgressDialog loadingBar;
@@ -51,12 +58,22 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_takeaway);
 
+        ActionBar actionBar = getSupportActionBar();
+
+        // showing the back button in action bar
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         mContext = this;
         btnSubmitTWD = findViewById(R.id.btnSubmitTWD);
         spTWBranch = findViewById(R.id.spTWBranch);
         etTWName = findViewById(R.id.etTWName);
         etTWNo = findViewById(R.id.etTWNo);
         etTWTime = findViewById(R.id.etTWTime);
+
+        imageView13 = findViewById(R.id.imageView13);
+        imageView11 = findViewById(R.id.imageView11);
+        imageView12 = findViewById(R.id.imageView12);
+
         loadingBar = new ProgressDialog(this);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -73,6 +90,29 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
             @Override
             public void onClick(View view) {
                 takeawayOder();
+            }
+        });
+
+        imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(takeaway.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(takeaway.this, Orderdetails.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(takeaway.this, ContactUs.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -179,5 +219,18 @@ public class takeaway extends AppCompatActivity implements AdapterView.OnItemSel
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    // this event will enable the back
+    // function to the button on press
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                startActivity(new Intent(takeaway.this, Menu1.class));
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

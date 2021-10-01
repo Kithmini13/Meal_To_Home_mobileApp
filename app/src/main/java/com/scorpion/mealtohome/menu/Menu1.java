@@ -13,9 +13,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.scorpion.mealtohome.PwymentMathordActivity;
 import com.scorpion.mealtohome.R;
 import com.scorpion.mealtohome.UpdateProfileActivity;
+import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.login.Login;
+import com.scorpion.mealtohome.login.Login1;
 import com.scorpion.mealtohome.login.Login3;
 import com.scorpion.mealtohome.order.Orderdetails;
 
@@ -25,7 +28,7 @@ public class Menu1 extends AppCompatActivity {
 
     Button btnSriLanka, btnIndian, btnItalian, btnChinese;
     TextView tvSL1, tvSL2, tvSL3,textView9,textView10,textView11;
-    ImageView imageView7,imageView8,imageView9,imgVProfile,imgCart1;
+    ImageView imageView7,imageView8,imageView9,imgVProfile,imgCart1,imageView13,imageView12;
     String S1,S2,S3;
 
     @Override
@@ -49,6 +52,8 @@ public class Menu1 extends AppCompatActivity {
         textView9 = findViewById(R.id.textView9);
         textView10 = findViewById(R.id.textView10);
         textView11 = findViewById(R.id.textView11);
+        imageView13 = findViewById(R.id.imageView13);
+        imageView12 = findViewById(R.id.imageView12);
         imgVProfile = findViewById(R.id.imgVProfile);
 
         tvSL1 = findViewById(R.id.tvSL1);
@@ -58,6 +63,7 @@ public class Menu1 extends AppCompatActivity {
         btnSriLanka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnSriLanka.isSelected();
                 Intent intent = new Intent(Menu1.this, Menu1.class);
                 startActivity(intent);
                 finish();
@@ -65,7 +71,9 @@ public class Menu1 extends AppCompatActivity {
         }); btnIndian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btnIndian.isSelected();
                 Intent intent=new Intent(Menu1.this, Menu1India.class);
+                intent.putExtra("phoneNo",getIntent().getStringExtra("phoneNo"));
                 startActivity(intent);
                 finish();
             }
@@ -73,6 +81,7 @@ public class Menu1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Menu1.this, Menu1Italian.class);
+                intent.putExtra("phoneNo",getIntent().getStringExtra("phoneNo"));
                 startActivity(intent);
                 finish();
             }
@@ -80,6 +89,7 @@ public class Menu1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Menu1.this, Menu1Chines.class);
+                intent.putExtra("phoneNo",getIntent().getStringExtra("phoneNo"));
                 startActivity(intent);
                 finish();
             }
@@ -155,6 +165,20 @@ public class Menu1 extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
+        });imageView13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Menu1.this, Menu1.class);
+                startActivity(intent);
+                finish();
+            }
+        });imageView12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Menu1.this, ContactUs.class);
+                startActivity(intent);
+                finish();
+            }
         });
     }
 
@@ -164,6 +188,7 @@ public class Menu1 extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                startActivity(new Intent(Menu1.this, Login3.class));
                 this.finish();
                 return true;
         }
