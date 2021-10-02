@@ -62,7 +62,6 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="8dp"
-                android:background="#A0D660"
                 android:text="@string/sri_lankan"
                 app:layout_constraintEnd_toStartOf="@+id/btnIndianC"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -97,6 +96,7 @@
                 android:layout_height="50dp"
                 android:layout_marginEnd="5dp"
                 android:text="@string/chinese"
+                android:backgroundTint="@color/button_background_color"
                 app:layout_constraintBaseline_toBaselineOf="@+id/btnItalianC"
                 app:layout_constraintEnd_toEndOf="parent" />
 
