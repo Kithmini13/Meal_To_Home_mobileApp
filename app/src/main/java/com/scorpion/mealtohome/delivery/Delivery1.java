@@ -220,7 +220,7 @@ public class Delivery1 extends AppCompatActivity {
         }if(delAdd2.isEmpty() || delAdd2.length()>30){
             etAddress2.setError("Please Enter Valid Address Line 2");
             valid =false;
-        }if(cusNo.isEmpty() || cusNo.length()>10){
+        }if(cusNo.length() != 10){
             etContact.setError("Please Enter Valid Contact Number");
             valid =false;
         }

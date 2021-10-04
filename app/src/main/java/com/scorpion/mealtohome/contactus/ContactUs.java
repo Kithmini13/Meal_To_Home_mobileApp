@@ -34,6 +34,8 @@ import com.scorpion.mealtohome.feedback.LeaveAFeedback;
 import com.scorpion.mealtohome.login.Login3;
 import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.Orderdetails;
+import com.scorpion.mealtohome.payment.Payment3;
+import com.scorpion.mealtohome.payment.Payment4;
 
 import java.util.HashMap;
 
@@ -160,7 +162,11 @@ public class ContactUs extends AppCompatActivity {
                                         }).setNegativeButton("Update Details", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-                                        startActivity(new Intent(mContext, ContactUs.class));
+                                        Intent intent = new Intent(mContext, ContactUsUpdateActivity.class);
+                                        intent.putExtra("contactName", etContactName.getText().toString());
+                                        startActivity(intent);
+                                        finish();
+
                                     }
                                 });
 
