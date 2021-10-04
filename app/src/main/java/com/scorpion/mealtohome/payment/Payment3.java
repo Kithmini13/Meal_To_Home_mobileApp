@@ -150,13 +150,13 @@ public class Payment3 extends AppCompatActivity {
         if(name.isEmpty() || name.length()>20){
             etOwnerName.setError("Please Enter Valid Full Name");
             valid =false;
-        }if(date.isEmpty()){
-            etExDate.setError("Please Check Date and Time");
+        }if(date.isEmpty() || date.length()>10){
+            etExDate.setError("Please Check Date");
             valid =false;
         }if(no.isEmpty() || no.length()>19){
             etCardNo.setError("Please Enter Valid Card No");
             valid =false;
-        }if(pin.isEmpty() || pin.length()>3){
+        }if(pin.length() != 3){
             etCardCode.setError("Please Enter Valid Pin No");
             valid =false;
         }
