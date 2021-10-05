@@ -100,7 +100,7 @@ public class Login3 extends AppCompatActivity {
                             Toast.makeText(Login3.this,"Login successfully!",Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
-                            Intent b = new Intent(Login3.this, Login1.class);
+                            Intent b = new Intent(Login3.this, Menu1.class);
                             b.putExtra("phoneNo",phone);
                             startActivity(b);
 

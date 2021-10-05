@@ -245,7 +245,7 @@ public class LeaveAFeedback extends AppCompatActivity {
     private boolean validate() {
         boolean valid = true;
 
-        if(feedback.isEmpty() || feedback.length()>20){
+        if(feedback.isEmpty() || feedback.length()>50){
             etFeedbackMsg.setError("Please Enter Feedback Massage");
             valid =false;
         }if(rateCount.isEmpty()){
