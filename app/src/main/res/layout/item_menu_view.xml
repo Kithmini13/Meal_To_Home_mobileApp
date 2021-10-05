@@ -19,9 +19,9 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:paddingLeft="10dp"
-            android:text="Rice"
+
             android:textAlignment="center"
-            android:textAllCaps="true"
+
             android:textColor="#000"
             android:textSize="18sp" />
 
@@ -37,7 +37,7 @@
             android:paddingLeft="10dp"
             android:text="Rs. 100"
             android:textAlignment="center"
-            android:textAllCaps="true"
+
             android:textColor="#000"
             android:textSize="18sp" />
 

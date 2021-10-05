@@ -1,8 +1,5 @@
 package com.scorpion.mealtohome.Model;
 
-import lombok.Data;
-
-@Data
 public class Menu {
 
     private String id;

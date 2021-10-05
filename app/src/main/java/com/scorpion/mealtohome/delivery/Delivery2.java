@@ -32,12 +32,13 @@ import com.scorpion.mealtohome.contactus.ContactUs;
 import com.scorpion.mealtohome.menu.Menu1;
 import com.scorpion.mealtohome.order.Orderdetails;
 import com.scorpion.mealtohome.payment.Payment1;
+import com.scorpion.mealtohome.payment.PaymentTypeHitory;
 
 public class Delivery2 extends AppCompatActivity {
 
     TextView tvMobile,tvName,tvAdd1,tvAdd2,tvA2;
     DatabaseReference databaseReference;
-    Button btnMakePayment;
+    Button btnMakePayment,btnPaymentHistory;
     String amount,totAmount;
 //    FirebaseDatabase database;
     DatabaseReference reference;
@@ -66,6 +67,7 @@ public class Delivery2 extends AppCompatActivity {
         tvAdd1 = findViewById(R.id.tvAdd1);
         tvAdd2 = findViewById(R.id.tvAdd2);
         btnMakePayment = findViewById(R.id.btnMakePayment);
+        btnPaymentHistory = findViewById(R.id.btnPaymentHistory);
         tvA2 = findViewById(R.id.tvA2);
         imageView13 = findViewById(R.id.imageView13);
         imageView11 = findViewById(R.id.imageView11);
@@ -125,6 +127,15 @@ public class Delivery2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Delivery2.this, ContactUs.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btnPaymentHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Delivery2.this, PaymentTypeHitory.class);
                 startActivity(intent);
                 finish();
             }
