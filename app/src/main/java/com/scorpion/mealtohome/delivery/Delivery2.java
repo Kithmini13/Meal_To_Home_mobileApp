@@ -39,12 +39,14 @@ public class Delivery2 extends AppCompatActivity {
     DatabaseReference databaseReference;
     Button btnMakePayment;
     String amount,totAmount;
-    FirebaseDatabase database;
+//    FirebaseDatabase database;
     DatabaseReference reference;
     DocumentReference documentReference;
     ImageView imageView13,imageView11,imageView12;
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+//    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    DatabaseReference database ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +58,8 @@ public class Delivery2 extends AppCompatActivity {
         // showing the back button in action bar
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        database = FirebaseDatabase.getInstance();
-        reference =database.getReference("Deliver");
+//        database = FirebaseDatabase.getInstance();
+//        reference =database.getReference("Deliver");
 
         tvMobile = findViewById(R.id.tvMobile);
         tvName = findViewById(R.id.tvName);
@@ -71,6 +73,28 @@ public class Delivery2 extends AppCompatActivity {
 
         amount = getIntent().getStringExtra("totalAmount");
         tvA2.setText(amount);
+
+
+        database = FirebaseDatabase.getInstance().getReference("Deliver").child(getIntent().getStringExtra("oderID"));
+
+        database.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    tvMobile.setText(snapshot.child("cusNo").getValue().toString());
+                    tvName.setText(snapshot.child("cusName").getValue().toString());
+                    tvAdd1.setText(snapshot.child("add1").getValue().toString());
+                    tvAdd2.setText(snapshot.child("add2").getValue().toString());
+                }else {
+                    Log.e("Tag","massage"+"No snapshot");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         btnMakePayment.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -117,7 +117,7 @@
     <!--    <string name="name">Name</string>-->
     <string name="password_test">Password</string>
     <string name="email_address">Email Address</string>
-    <string name="phone">Mobile Number</string>
+    <string name="phone">Mobile Number :</string>
     <string name="fName">Full Name</string>
     <string name="lName">Last Name</string>
     <string name="next">Next</string>

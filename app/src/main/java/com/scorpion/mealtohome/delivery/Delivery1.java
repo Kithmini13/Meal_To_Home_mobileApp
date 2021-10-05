@@ -175,6 +175,7 @@ public class Delivery1 extends AppCompatActivity {
                                 Intent intent=new Intent(mContext, Delivery2.class);
                                 totAmount = tvA1.getText().toString();
                                 intent.putExtra("totalAmount", totAmount);
+                                intent.putExtra("oderID", etOrderId.getText().toString());
                                 startActivity(intent);
                                 finish();
                             }else {
