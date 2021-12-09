@@ -14,7 +14,7 @@ Mobile Application | 2nd year 2nd semester Project | SLIIT
   </p>
   
   <h2>About this project</h2>
-  This is an Android app for a food ordering system. Customers can order through this app.
+  This is a mobile application suitable for a restaurant chain, where customers can order online to deliver their favorite meals.
   
   
   <h2>Advertising</h2>
