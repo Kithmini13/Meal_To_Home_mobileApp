@@ -1,5 +1,5 @@
 # Meal_To_Home_mobileApp
-Mobile Application | 1st year 2nd semester Project | SLIIT
+Mobile Application | 2nd year 2nd semester Project | SLIIT
 
 
 <h1 align="center">~~ American Musical Supply ~~</h1>
