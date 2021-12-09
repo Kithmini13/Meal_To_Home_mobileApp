@@ -20,9 +20,7 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
   
   
   <h2>Advertising</h2>
-<iframe width="420" height="315"
-src="https://youtu.be/Ycgmel8ApsA">
-</iframe>
+  https://user-images.githubusercontent.com/88779731/145371561-ccb78829-c2e0-45e8-953b-872003bba2f1.mp4
   
   
   <h2>Tools & Technologies</h2>
