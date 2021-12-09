@@ -20,10 +20,9 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
   
   
   <h2>Advertising</h2>
-  <video controls autoplay>
-  <source src="https://youtu.be/Ycgmel8ApsA" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
+  <iframe controls autoplay
+  src="https://youtu.be/Ycgmel8ApsA">
+  </iframe>
   
   
   <h2>Tools & Technologies</h2>
@@ -35,7 +34,7 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
     
   - JAVA
    
-     <img src="https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png"  width="200" height="85"/>
+     <img src="https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png"  width="85" height="85"/>
     
     
   - Firebase
