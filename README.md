@@ -9,8 +9,6 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
   <img src="https://user-images.githubusercontent.com/88779731/145366578-f024b7ab-00b3-49e1-a4cc-62a0883a8ad8.jpg" width="150" height="150"/>
 </p>
 <p>
-
-  
   This is a project done for the Mobile Application module of BSc(Hons) Degree in Information Technology in Sri Lanka Institute of Information Technology.
   
   </p>
@@ -20,7 +18,10 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
   
   
   <h2>Advertising</h2>
-  https://user-images.githubusercontent.com/88779731/145371561-ccb78829-c2e0-45e8-953b-872003bba2f1.mp4
+    <p align="center">
+ 
+  <viedeo src="https://youtu.be/Ycgmel8ApsA/>
+</p>
   
   
   <h2>Tools & Technologies</h2>
