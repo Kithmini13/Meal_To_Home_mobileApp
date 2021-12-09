@@ -2,7 +2,7 @@
 Mobile Application | 2nd year 2nd semester Project | SLIIT
 
 
-<h1 align="center">~~ American Musical Supply ~~</h1>
+<h1 align="center">~~ Meal To Home - Mobile Application ~~</h1>
 
 <p align="center">
  
