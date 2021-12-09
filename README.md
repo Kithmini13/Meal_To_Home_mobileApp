@@ -20,9 +20,9 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
   
   
   <h2>Advertising</h2>
-  <iframe controls autoplay
-  src="https://youtu.be/Ycgmel8ApsA">
-  </iframe>
+<iframe width="420" height="315"
+src="https://youtu.be/Ycgmel8ApsA">
+</iframe>
   
   
   <h2>Tools & Technologies</h2>
@@ -39,7 +39,7 @@ Mobile Application | 1st year 2nd semester Project | SLIIT
     
   - Firebase
    
-     <img src="https://miro.medium.com/max/800/0*CPTNvq87xG-sUGdx.png"  width="200" height="85"/>
+     <img src="https://miro.medium.com/max/800/0*CPTNvq87xG-sUGdx.png"  width="85" height="85"/>
   
   
 
