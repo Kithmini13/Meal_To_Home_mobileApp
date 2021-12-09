@@ -14,7 +14,7 @@ Mobile Application | 2nd year 2nd semester Project | SLIIT
   </p>
   
   <h2>About this project</h2>
-  This is a group project which is conducted as an assignment of the module Mobile Application Development. This is a mobile application suits for a restaurant chain, where customers can make orders online to deliver favorite meals.
+  This is an Android app for a food ordering system. Customers can order through this app.
   
   
   <h2>Advertising</h2>
