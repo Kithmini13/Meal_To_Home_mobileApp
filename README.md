@@ -18,7 +18,7 @@ Mobile Application | 2nd year 2nd semester Project | SLIIT
   
   
   <h2>Advertising</h2>
-  https://youtu.be/Ycgmel8ApsA
+  - https://youtu.be/Ycgmel8ApsA
   
   
   <h2>Tools & Technologies</h2>
