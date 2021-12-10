@@ -9,7 +9,7 @@ Mobile Application | 2nd year 2nd semester Project | SLIIT
   <img src="https://user-images.githubusercontent.com/88779731/145366578-f024b7ab-00b3-49e1-a4cc-62a0883a8ad8.jpg" width="150" height="150"/>
 </p>
 <p>
-  This is a project done for the Mobile Application module of BSc(Hons) Degree in Information Technology in Sri Lanka Institute of Information Technology.
+  This is a project done for the Mobile Application Development module of BSc(Hons) Degree in Information Technology in Sri Lanka Institute of Information Technology.
   
   </p>
   
@@ -18,7 +18,7 @@ Mobile Application | 2nd year 2nd semester Project | SLIIT
   
   
   <h2>Advertising</h2>
-  - https://youtu.be/Ycgmel8ApsA
+  https://user-images.githubusercontent.com/88779731/145511269-997fdf03-df29-4f5d-b285-cb3bd4c071ab.mp4
   
   
   <h2>Tools & Technologies</h2>
