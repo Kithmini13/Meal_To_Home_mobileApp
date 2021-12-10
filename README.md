@@ -19,7 +19,7 @@ Mobile Application | 2nd year 2nd semester Project | SLIIT
   
   <h2>Advertising</h2>
   
-https://user-images.githubusercontent.com/88779731/145511269-997fdf03-df29-4f5d-b285-cb3bd4c071ab.mp4
+https://user-images.githubusercontent.com/88779731/145512139-265e9719-92ba-4e6d-a7b8-d28c645bea20.mp4
   
   
   <h2>Tools & Technologies</h2>
