@@ -32,7 +32,7 @@ public abstract class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHol
     ArrayList<Category> list;
     private DatabaseReference database;
 
-
+    // Test
     public MyAdapter(@NonNull ThankYouScreen context, ArrayList<Category> list) {
 
         this.context = context;
